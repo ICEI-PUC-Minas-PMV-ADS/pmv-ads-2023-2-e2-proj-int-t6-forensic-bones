@@ -1,19 +1,20 @@
-# TÍTULO DO PROJETO
+# FORENSIC BONES
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`CURSO`
+`PROJETO: DESENVOLVIMENTO DE UMA APLICAÇÃO INTERATIVA`
 
-`DISCIPLINA`
-
-`SEMESTRE`
+`SEGUNDO SEMESTRE`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Breno Augusto França da Silva
+* Bruno de Lima e Souza
+* Gabriel Muzzi Machado
+* João Paulo de Freitas Teixeira Leite
+* Luilson de Jesus Brandão
+* Vanderson Barbosa de Oliveira
 
 ## Orientador
 
