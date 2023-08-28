@@ -1,10 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A definição precisa do problema e os aspectos mais pertinentes a serem observados neste projeto foram consolidados através de um trabalho de imersão, realizado pela equipe, que envolveu a observação dos usuários em seu ambiente natural, bem como entrevistas com especialistas. Os insights obtidos durante esse processo foram sintetizados na forma de personas e histórias de usuários.
 
 ## Personas
 
@@ -48,30 +44,26 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-01| Gerenciar um inventário ósseo com checklist dos ossos do crânio com campo de comentário associado a cada osso | ALTA | 
+|RF-02| Realizar a contagem óssea   | BAIXA |
+|RF-03| Gerenciar uma base de imagens a partir de fotografias do inventário ósseo  | MÉDIA |
+|RF-04| Armazenar fotografias dos achados patológicos do crânio.   | MÉDIA |
+|RF-05| Disponibilizar a imagem de cada osso para realizar a classificação de formato associada a ele.  | MÉDIA |
+|RF-06| Disponibilizar guia de referência didático visual para consulta.| ALTA |
+|RF-07| Classificar os marcadores ósseos para estimativa de sexo.   | ALTA |
+|RF-08| Calcular sexo a partir das características anatômicas dos ossos do crânio.   | ALTA |
+|RF-09| Permitir que o usuário realize cadastro na aplicação.   | ALTA |
+|RF-10| Permitir que o usuário faça login.   | ALTA |
+|RF-11| Permitir que o usuário acesse e imprima um PDF com as informações geradas.   | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-01| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-02| Publicar o aplicativo em ambiente acessível na Internet |  ALTA | 
+|RNF-03| Compatibilidade com navegadores principais |  MÉDIA | 
+|RNF-04| Realizar cálculo em menos de 3 segundos |  ALTA | 
 
 ## Restrições
 
@@ -80,14 +72,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|02| Utilizando apenas tecnologias básicas da Web no Front-end e Back-end |
+|03| Número pequeno de desenvolvedores responsáveis pelo desenvolvimento da aplicação |
+|04| Custo elevado da literatura para o embasamento técnico-científico |
 
 ## Diagrama de Casos de Uso
 
