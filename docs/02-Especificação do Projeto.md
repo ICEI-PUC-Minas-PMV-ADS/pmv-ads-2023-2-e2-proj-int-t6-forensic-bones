@@ -78,7 +78,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/8c36d5ae1914feab9dd17c96721beb0050c6ca81/User's%20case%20diagram.png" width=70% height=70%>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/b4586cf483c0e4b2e720408f6a0b23bc54b0f009/docs/img/User's%20case%20diagram.png">
 
 > **Links Úteis**:
 > - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
