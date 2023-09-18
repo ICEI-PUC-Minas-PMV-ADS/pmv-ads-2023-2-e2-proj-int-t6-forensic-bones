@@ -58,6 +58,8 @@ A metodologia Scrum é utilizada como base para definição do processo de desen
 ### Processo
 
 Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/Trello.PNG">
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
