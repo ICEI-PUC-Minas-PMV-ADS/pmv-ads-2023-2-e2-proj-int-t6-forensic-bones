@@ -4,7 +4,31 @@ A definição precisa do problema e os aspectos mais pertinentes a serem observa
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As personas desenvolvidas como parte do entendimento do problema são adquiridas a seguir:
+Lucas Silva
+Idade: 36 anos
+Ocupação: Odontolegista, trabalha como perito criminal em um instituto médico-legal, auxiliando na identificação de restos mortais desconhecidos em casos criminais e de desastres em massa.
+Motivações: 
+- Contribuir para a solução de casos forenses complexos.
+- Desenvolver técnicas que auxiliam na identificação humana.
+Frustrações:
+- Falta de investimentos em recursos tecnológicos nos IML’S.
+- Dificuldade em adquirir e preservar o acervo bibliográfico de consulta no IML.
+Hobbies, História:
+- Lucas é apaixonado por ciências forenses e tecnologia desde sua graduação em odontologia. Ele é ativo em conferências e workshops, buscando sempre se atualizar nas técnicas e metodologias da área.
+
+Ana Luiza Braga
+Idade: 27 anos
+Ocupação: Estudante, estudante do último ano do curso de medicina e monitora da disciplina de medicina legal.
+Motivações: 
+- Contribuir para o meio acadêmico por meio de produção de conteúdo científico.
+- Aprimorar métodos de estimativa de sexo a partir de estudos antropológicos do crânio.
+Frustrações:
+- Falta de ferramentas tecnológicas específicas para aplicar no estudo acadêmico da antropologia forense.
+Hobbies, História:
+- Ana é estagiária do setor de antropologia forense de um IML, presidente da liga acadêmica de antropologia forense de sua região. Após concluir sua graduação pretende prestar concurso para perito criminal da polícia federal.
+
+
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
