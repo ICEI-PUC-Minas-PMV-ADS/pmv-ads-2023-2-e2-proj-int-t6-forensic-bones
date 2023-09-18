@@ -39,7 +39,16 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+A metodologia Scrum é utilizada como base para definição do processo de desenvolvimento e a equipe está organizada da seguinte maneira:
+
+| Função  | Nome |
+| ------------- | ------------- |
+| Scrum Master  | João Paulo de Freitas  |
+| Product Owner  | Luilson Brandão  |
+| Desenvolvedor  | Breno Augusto França da Silva   |
+| Desenvolvedor  | Bruno Lima |
+| Desenvolvedor  | Vanderson Oliveira  |
+| Design | Gabriel Muzzi  |
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
@@ -59,6 +68,13 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
+
+| Ambiente  | Plataforma | Link de acesso |
+| ------------- | ------------- | ------------- |
+| Repositório de código fonte  | [Github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones)  | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones |
+| Documentos do projeto  | [Google Drive](https://drive.google.com/drive/u/0/folders/1Ab6gxBs05j2wJEWW6AgGGS31yRg9j0iE)  | https://drive.google.com/drive/u/0/folders/1Ab6gxBs05j2wJEWW6AgGGS31yRg9j0iE |
+| Projeto de Interface e  Wireframes  | [Canva](https://www.canva.com/design/DAFgw82zoyo/qi909z2SA_Him5aF0CR0NQ/view?utm_content=DAFgw82zoyo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)  | https://www.canva.com/design/DAFgw82zoyo/qi909z2SA_Him5aF0CR0NQ/view?utm_content=DAFgw82zoyo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink |
+| Gerenciamento do Projeto  | [Trello](https://trello.com/b/oeuQCF86/forensic-bones)  | https://trello.com/b/oeuQCF86/forensic-bones |
 
 - Editor de código.
 - Ferramentas de comunicação
