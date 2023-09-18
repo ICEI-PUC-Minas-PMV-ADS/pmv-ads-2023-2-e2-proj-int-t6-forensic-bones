@@ -73,7 +73,7 @@ As ferramentas empregadas no projeto são:
 | ------------- | ------------- | ------------- |
 | Repositório de código fonte  | [Github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones)  | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones |
 | Documentos do projeto  | [Google Drive](https://drive.google.com/drive/u/0/folders/1Ab6gxBs05j2wJEWW6AgGGS31yRg9j0iE)  | https://drive.google.com/drive/u/0/folders/1Ab6gxBs05j2wJEWW6AgGGS31yRg9j0iE |
-| Projeto de Interface e  Wireframes  | [Canva](https://www.canva.com/design/DAFgw82zoyo/qi909z2SA_Him5aF0CR0NQ/view?utm_content=DAFgw82zoyo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)  | https://www.canva.com/design/DAFgw82zoyo/qi909z2SA_Him5aF0CR0NQ/view?utm_content=DAFgw82zoyo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink |
+| Projeto de Interface e  Wireframes  | [Canva](https://www.canva.com/design/DAFgw82zoyo/qi909z2SA_Him5aF0CR0NQ/view?utm_content=DAFgw82zoyo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)  | https://www.canva.com/ |
 | Gerenciamento do Projeto  | [Trello](https://trello.com/b/oeuQCF86/forensic-bones)  | https://trello.com/b/oeuQCF86/forensic-bones |
 
 - Editor de código.
