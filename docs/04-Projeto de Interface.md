@@ -22,8 +22,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/Wireframe1.PNG.png">
-<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/Wireframe2.PNG">
+<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/_%20Wireframe%20%20(Forensic%20Bones)%20.jpg">
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
 
