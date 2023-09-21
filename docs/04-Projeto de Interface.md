@@ -26,11 +26,13 @@ Conforme o diagrama de fluxo do projeto, apresentado no item anterior, as telas 
 
 <img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/_%20Wireframe%20%20(Forensic%20Bones)%20.jpg">
 
-As telas do sistema apresentam uma estrutura comum que é apresentada na Figura 1. Nesta estrutura, existem 3 grandes blocos, descritos a seguir. São eles:
+As telas do sistema apresentam uma estrutura comum que é apresentada na Figura 1. Nesta estrutura, existem 3 grandes blocos, descritos a seguir. 
+São eles:
+
 ●	Cabeçalho - local onde são dispostos elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação);
 ●	Conteúdo - apresenta o conteúdo da tela em questão;
 
-<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/commit/5ddaee7056a2865adef7dbdf4aa23cf0abf7830c">
+<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/_%20Wireframe%20%20(Forensic%20Bones)_%20Figura%201%20-%20Estrutura%20padr%C3%A3o%20do%20site.png">
 Figura 1 - Estrutura padrão do site
 
 Tela - Landing Page 1
