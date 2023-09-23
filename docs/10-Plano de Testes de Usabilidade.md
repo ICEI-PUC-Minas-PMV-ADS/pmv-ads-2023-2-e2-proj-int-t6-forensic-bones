@@ -11,7 +11,7 @@ Não haverá participantes envolvidos neste método de avaliação, pois ele se 
 
 Procedimentos dos Testes de Usabilidade
 
-Os testes de usabilidade serão conduzidos por uma equipe de especialistas em usabilidade, antropologia forense e design de interface. Os procedimentos incluem:
+Os testes de usabilidade serão conduzidos por uma equipe de usabilidade, antropologia forense e design de interface. Os procedimentos incluem:
 
 Inspeção Heurística: Cada membro da equipe realizará uma inspeção heurística independente do software "Forensic Bones" com base nas heurísticas definidas.
 Identificação de Problemas: Durante a inspeção, os especialistas identificarão problemas de usabilidade, registrando descrições detalhadas, capturas de tela e recomendações para correção.
@@ -26,9 +26,9 @@ Recursos Necessários
 
 Os recursos necessários para a realização dos testes de usabilidade baseados no método de inspeção heurística incluem:
 
-Dispositivos (computadores ou dispositivos móveis) com o software "Forensic Bones" instalado.
+Dispositivos (computadores ou dispositivos móveis) para análise do protótipo de software "Forensic Bones".
 
-Equipe de especialistas em usabilidade, antropologia forense e design de interface.
+Equipe de usabilidade, antropologia forense e design de interface.
 
 Lista de verificação para avaliação das heurísticas.
 
@@ -46,7 +46,7 @@ Este método de avaliação não envolve a participação de usuários reais, po
 
 Cronograma
 
-A avaliação heurística será realizada ao longo de duas semanas, com a elaboração do relatório final até o final do terceiro mês de desenvolvimento do software "Forensic Bones."
+A avaliação heurística será realizada ao longo de duas semanas, com a elaboração do relatório final até o final do segundo mês de desenvolvimento do software "Forensic Bones."
 
 Conclusão
 
