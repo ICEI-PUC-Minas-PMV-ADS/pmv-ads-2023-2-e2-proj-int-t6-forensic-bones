@@ -1,10 +1,6 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
-
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
-
-Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o(s) requisito(s) associado(s) a cada um deles está(ão) correto(s) - de acordo com o que foi definido na seção "2 - Especificação do Projeto". 
+Neste plano de teste, buscamos detalhar as funções que necessitam de testes antes do primeiro contato com o usuário final. Cada caso abrange cenários específicos de teste de usabilidade e resposta da aplicação 
 
 | Caso de Teste | CT-001 Cadastro |
 | --- | --- |
@@ -48,12 +44,18 @@ Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o
 | Passo | - Criar novo relatório LAF. -Entrar com quantidade de ossos e comentário, nas linhas correspondente a cada osso. - Salvar  |
 | Critério de Êxito | Verificar se a aplicação salva os dados inseridos no inventário ósseo. |
 
+| Caso de Teste | CT-007 Inserir Fotos |
+| --- | --- |
+| Requisitos Associados | A aplicação deve ter um botão de “inserir foto” ao final do inventário ósseo. |
+| Objetivo do Teste | Verificar se o usuário consegue entrar com arquivos JPGE, IMG, GIF, PNG. |
+| Passo | - Criar novo relatório LAF. -Rolar a página até o final e após salvar, os dados ósseos - Inserir Fotos |
+| Critério de Êxito | Verificar se a aplicação salva os dados inseridos no inventário ósseo. |
 
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+| Caso de Teste | CT-008 Preenchimento da estimativa de sexo pelo crânio |
+| --- | --- |
+| Requisitos Associados | A aplicação deve ter uma relação dos ossos para estimativa do sexo pelo crânio onde vai ser inserido a estimativa e espaço para comentário. |
+| Objetivo do Teste | Verificar se o usuário consegue entrar com estimativa (está sendo somente S ou M) e podendo fazer um comentário ao final. |
+| Passo | - Criar novo relatório LAF. -Rolar a página até o final e após salvar, os dados ósseos - Preenchimento de estimativa de sexo pelo crânio |
+| Critério de Êxito | Verificar se a aplicação salva os dados inseridos em estimativa de sexo pelo crânio. |
+
+Este plano de teste de software, datado de 24/09/2023, é um reflexo do nosso compromisso com a qualidade e funcionalidade do nosso software. No entanto, este é um documento vivo e novos casos de teste podem ser adicionados para abordar novas funcionalidades e cenários. Continuaremos a manter este plano atualizado para refletir nossos esforços contínuos em garantir a qualidade do software.
