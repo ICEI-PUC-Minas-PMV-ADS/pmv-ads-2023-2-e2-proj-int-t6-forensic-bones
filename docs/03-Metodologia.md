@@ -1,9 +1,7 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Nessa seção iremos destacar o ferramental escolhido para execução desse projeto, bem como o método que utilizaremos.
 
 ## Controle de Versão
 
@@ -26,15 +24,6 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-
 ## Gerenciamento de Projeto
 
 ### Divisão de Papéis
@@ -50,23 +39,12 @@ A metodologia Scrum é utilizada como base para definição do processo de desen
 | Desenvolvedor  | Vanderson Oliveira  |
 | Design | Gabriel Muzzi  |
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+O controle de sprint será realizado por meio da ferramenta Trello, utilizando um modelo de quadro Kanban, conforme mostrado abaixo:
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/Trello.PNG">
  
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
-
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
@@ -75,21 +53,14 @@ As ferramentas empregadas no projeto são:
 | ------------- | ------------- | ------------- |
 | Repositório de código fonte  | [Github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones)  | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones |
 | Documentos do projeto  | [Google Drive](https://drive.google.com/drive/u/0/folders/1Ab6gxBs05j2wJEWW6AgGGS31yRg9j0iE)  | https://drive.google.com/drive/u/0/folders/1Ab6gxBs05j2wJEWW6AgGGS31yRg9j0iE |
-| Projeto de Interface e  Wireframes  | [Canva](https://www.canva.com/design/DAFgw82zoyo/qi909z2SA_Him5aF0CR0NQ/view?utm_content=DAFgw82zoyo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)  | https://www.canva.com/ |
+| Projeto de Interface e  Wireframes  | [Canva](https://www.canva.com/)  | https://www.canva.com/design/DAFu6e3G0JU/keAuMyBI-ArgNPCcAhhz9A/view?utm_content=DAFu6e3G0JU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink |
 | Gerenciamento do Projeto  | [Trello](https://trello.com/b/qvbZNCOx/forensic-bones1)  | https://trello.com/b/oeuQCF86/forensic-bones |
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Editor de código: Visual Studio.
+- Ferramentas de comunicação: Microsoft Teams.
 
 O editor de código foi escolhido porque ele possui uma integração com o
 sistema de versão. As ferramentas de comunicação utilizadas possuem
 integração semelhante e por isso foram selecionadas. Por fim, para criar
 diagramas utilizamos essa ferramenta por melhor captar as
 necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
