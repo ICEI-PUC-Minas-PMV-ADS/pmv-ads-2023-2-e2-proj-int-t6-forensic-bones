@@ -1,3 +1,11 @@
+| **Caso de teste**  | ** CT- 001 Cadastro** |
+| ------------- | ------------- |
+| **Requisitos associados**  |A tela home deve apresentar, a funcionalidade de cadastro de usuário, para que consigam gerenciar seus arquivos.|
+| **Objetivo do teste**   |Testar se o usuário consegue se cadastrar na aplicação.|
+| **Passos**  |Acessar o navegador e inserir, https:// forensicbones.com, cria conta,Preencher os dados solicitados (nome, e-mail, CPF e senha), clicar em registar-se.|
+| **Critérios de êxito**  |O cadastro vai ser realizado com sucesso e receber mensagem de confirmação de cadastro.|
+
+
 # Plano de Testes de Software
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
