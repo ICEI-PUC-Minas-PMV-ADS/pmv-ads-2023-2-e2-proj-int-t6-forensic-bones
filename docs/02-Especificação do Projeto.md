@@ -104,8 +104,3 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/2a1235e7c27d3aad72af8fa19531220bea321696/docs/img/User's%20case%20diagram.png">
 Figura 1 - Diagrama de casos de uso
-
-## Diagrama de Classes
-
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/Diagrama%20de%20Classes%20Atualizado.PNG">
-Figura 2 - Diagrama de Classes
