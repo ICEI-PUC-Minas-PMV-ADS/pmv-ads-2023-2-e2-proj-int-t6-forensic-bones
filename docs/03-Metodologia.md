@@ -44,6 +44,7 @@ A metodologia Scrum é utilizada como base para definição do processo de desen
 O controle de sprint será realizado por meio da ferramenta Trello, utilizando um modelo de quadro Kanban, conforme mostrado abaixo:
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t6-forensic-bones/blob/main/docs/img/Trello.PNG">
+Figura 3 - Quadro Kanban
  
 ### Ferramentas
 
