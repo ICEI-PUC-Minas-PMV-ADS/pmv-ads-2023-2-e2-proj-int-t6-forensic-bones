@@ -52,6 +52,65 @@ Conclusão
 
 Este plano de teste de usabilidade baseado no método de inspeção heurística visa avaliar a usabilidade do software "Forensic Bones" por meio da análise de especialistas. As descobertas resultantes dos testes permitirão identificar problemas de usabilidade e orientar o desenvolvimento de melhorias no aplicativo, mesmo sem a participação direta dos usuários.
 
+
+## Plano de Testes de Usabilidade - Software "Forensic Bones"
+
+Objetivos da Avaliação de Usabilidade
+
+O objetivo deste plano de teste de usabilidade é avaliar a qualidade da interface com o usuário do software "Forensic Bones," um aplicativo de identificação humana por meio do estudo antropológico forense, com foco na estimativa de sexo a partir da análise do crânio. Os principais objetivos são identificar problemas de usabilidade, verificar a aderência às heurísticas definidas e fornecer recomendações para melhorias.
+
+Critérios de Seleção dos Participantes
+
+Para os testes remotos de usabilidade, serão selecionados participantes com o seguinte perfil:
+
+•	Usuários em potencial do software "Forensic Bones."
+
+•	Diversidade de perfis, incluindo pessoas com conhecimento técnico e leigos na área de antropologia forense.
+
+•	Participantes que concordem com a coleta de dados, de acordo com a LGPD.
+
+•	Procedimentos dos Testes de Usabilidade Remotos
+
+Os testes de usabilidade remotos seguirão os seguintes procedimentos:
+
+1.	Seleção dos Participantes: Os participantes serão recrutados com base nos critérios definidos e convidados a participar dos testes.
+2.	Preparação: Antes do início dos testes, os participantes receberão informações sobre o processo e as tarefas a serem realizadas.
+3.	Ferramenta de Teste Remoto: Será fornecida uma ferramenta para os testes remotos: Google Meet, Click Stream e Eye Tracking, que permitirá aos participantes interagir com o protótipo software "Forensic Bones" a partir de seus próprios dispositivos e permitirá aos avaliadores coletarem as informações a partir da experiencia de uso do protótipo da aplicação.
+4.	Tarefas a Serem Realizadas: Os participantes serão instruídos a simular uma série de tarefas específicas no protótipo do software, como estimar o sexo de um crânio, adicionar legendas a fotos anexadas, completarem o inventário ósseo, entre outras.
+5.	Coleta de Dados: Durante os testes, serão registrados dados como quantidade de cliques, número de erros, tempo gasto em cada tarefa e feedback dos participantes.
+6.	Interpretação: Os condutores de teste observarão remotamente a interação dos participantes com o software e registrarão suas observações.
+7.	Relato dos resultados: Após a conclusão das tarefas, os participantes serão entrevistados remotamente para coletar feedback qualitativo sobre sua experiência de uso.
+8.	Anonimização de Dados: Todos os dados coletados serão anonimizados para atender à LGPD e garantir a privacidade dos participantes.
+9.	Análise de Dados: Os dados coletados serão analisados para identificar problemas de usabilidade e avaliar o desempenho dos participantes.
+10.	Relatório de Avaliação: Um relatório de avaliação será elaborado, incluindo a descrição das heurísticas avaliadas, problemas de usabilidade identificados, métricas quantitativas e feedback qualitativo dos participantes.
+11.	Recomendações de Melhoria: Com base nos resultados, serão fornecidas recomendações para melhorias na interface do software.
+
+Recursos Necessários
+
+Os recursos necessários para a realização dos testes de usabilidade remotos incluem:
+
+•	Ferramenta de testes remotos.
+
+•	Lista de tarefas a serem realizadas pelos participantes.
+
+•	Equipe de condutores de teste para observação remota.
+
+•	Equipe de entrevistadores para as entrevistas pós-teste.
+
+•	Consentimento informado dos participantes para coleta de dados.
+
+Considerações Éticas
+
+Os testes de usabilidade remotos serão conduzidos de acordo com a LGPD para proteger a privacidade dos participantes. Nenhum dado sensível que permita a identificação dos voluntários será coletado ou apresentado.
+
+Cronograma
+
+O cronograma para os testes de usabilidade remotos será definido com base na disponibilidade dos participantes. Espera-se que os testes sejam concluídos dentro de um prazo de duas semanas após o recrutamento dos participantes.
+
+Conclusão
+
+Este plano de teste de usabilidade remotos visa avaliar a usabilidade do software "Forensic Bones" por meio da participação de usuários em potencial. Os resultados obtidos fornecerão insights valiosos para melhorias na interface do aplicativo, garantindo uma experiência de usuário mais eficaz e satisfatória.
+
 _________________________________________________________________
 Os testes de usabilidade permitem avaliar a qualidade da interface com o usuário da aplicação interativa.
 
