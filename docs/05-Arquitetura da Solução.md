@@ -21,62 +21,34 @@ Figura x - Modelo Entidade-Relacionamento
 
 ## Projeto da Base de Dados
 
-Projeto Conceitual:
+### Inventário Esqueleto 
+|ID    | QuantidadeOssos  | Data |
+|------|:---:|------------|
+|LAF - 01| 23 | xx/xx/xxxx | 
+|LAF - 02| 17 | xx/xx/xxxx |
+|LAF - 03| 19 | xx/xx/xxxx |
 
-Nesta fase, definimos a estrutura de informações de alto nível sem se preocupar com a implementação técnica. Para o "Forensic Bones," podemos definir as seguintes entidades conceituais e seus atributos:
+### Fotografias Esqueleto
+|IdEsqueleto | URL | 
+|------|------------|
+|LAF - 01 | http://example1.com.br |
+|LAF - 02 | http://example2.com.br |
+|LAF - 03 | http://example3.com.br |
 
-Pessoa:
+### Inventário Crânio
+|IdEsqueleto| IdCrânio | Descrição | Frontal | ... | Mandíbula |
+|------|----------|---|:---:|---|:---:|
+|LAF - 01| LAF01-1 | example1 | 1 | ... | 1 |
+|LAF - 02| LAF01-2 | example2 | 3 | ... | 1 |
+|LAF - 03| LAF01-2 | example3 | 1 | ... | 1 |
 
-Atributos: ID (Chave Primária), Nome, Sexo, Data de Nascimento, Nacionalidade, Endereço, Etnia, etc.
-Crânio:
+### Marcadores Crânio
+|IdCranio| CristaNucal | ProcessoMastoide | EminenciaMentoniana | SupraOrbital | AreaGlabela | Observacoes |
+|------|:---:|:---:|:---:|:---:|:---:|:-----:|
+|LAF01-1| F | F | I | M | F | example1 |
+|LAF01-2| M | I | M | M | F | example2 |
+|LAF01-2| M | M | M | M | M | example3 |
 
-Atributos: ID (Chave Primária), Comprimento, Largura, Altura, Data de Descoberta, Local de Descoberta, Estado de Conservação, etc.
-Material de Referência:
-
-Atributos: ID (Chave Primária), Tipo (por exemplo, Fotografia, Anotação), Descrição, Data de Coleta, Local de Coleta, Coletor, etc.
-Estimativa de Sexo:
-
-Atributos: ID (Chave Primária), Resultado (Masculino, Feminino, Indeterminado), Método de Estimativa, Data da Estimativa, Perito Responsável, etc.
-Usuário:
-
-Atributos: ID (Chave Primária), Nome de Usuário, Senha (criptografada), Função (Administrador, Analista, etc.), Email, Data de Registro, etc.
-Nesta fase, também definimos os relacionamentos entre as entidades, como "Uma Pessoa pode ter Vários Crânios," "Um Crânio pode ter Vários Materiais de Referência" e "Uma Estimativa de Sexo pertence a Uma Pessoa."
-
-Projeto Lógico:
-
-No projeto lógico, traduzimos o modelo conceitual em um modelo adequado para um determinado Sistema de Gerenciamento de Banco de Dados Relacional (SGBD). Aqui estão as tabelas correspondentes às entidades e seus atributos:
-
-Tabela Pessoa:
-
-Colunas: ID (Chave Primária), Nome, Sexo, Data de Nascimento, Nacionalidade, Endereço, Etnia, etc.
-Tabela Crânio:
-
-Colunas: ID (Chave Primária), Comprimento, Largura, Altura, Data de Descoberta, Local de Descoberta, Estado de Conservação, etc.
-Chave Estrangeira: ID da Pessoa (para vincular um crânio a uma pessoa).
-Tabela Material de Referência:
-
-Colunas: ID (Chave Primária), Tipo, Descrição, Data de Coleta, Local de Coleta, Coletor, etc.
-Chave Estrangeira: ID da Pessoa (para vincular um material de referência a uma pessoa).
-Tabela Estimativa de Sexo:
-
-Colunas: ID (Chave Primária), Resultado (Masculino, Feminino, Indeterminado), Método de Estimativa, Data da Estimativa, Perito Responsável, etc.
-Chave Estrangeira: ID da Pessoa (para vincular uma estimativa de sexo a uma pessoa).
-Tabela Usuário:
-
-Colunas: ID (Chave Primária), Nome de Usuário, Senha (criptografada), Função (Administrador, Analista, etc.), Email, Data de Registro, etc.
-Projeto Físico:
-
-Nesta fase, definimos como os dados serão armazenados fisicamente no SGBD escolhido. Aqui estão alguns detalhes técnicos a serem considerados:
-
-Criar índices na tabela Pessoa para acelerar consultas por Nome, Data de Nascimento, ou outros campos frequentemente pesquisados.
-
-Definir partições na tabela Crânio para melhorar o desempenho da consulta, por exemplo, por Local de Descoberta ou Data de Descoberta.
-
-Estabelecer um plano de backup e recuperação para garantir a integridade dos dados, com agendamentos regulares de backup e testes de restauração.
-
-Configurar restrições de acesso de usuário, garantindo que apenas usuários autorizados acessem informações confidenciais. Isso inclui definir permissões de acesso, autenticação e auditoria de segurança.
-
-Implementar políticas de manutenção, como compactação de tabelas e atualização de estatísticas, para otimizar o desempenho do banco de dados ao longo do tempo.
 
 ## Tecnologias Utilizadas
 
