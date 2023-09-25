@@ -20,13 +20,6 @@ GÓRKA, K.; PLENS, CR Em busca da identidade: O campo da antropologia forense no
 
 O problema abordado neste projeto é a necessidade de desenvolver um método confiável e preciso para estimar o sexo de um indivíduo com base em características antropológicas específicas do crânio. Essa estimativa é fundamental para diversas áreas, incluindo investigações criminais, estudos arqueológicos e identificação médica.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 ## Objetivos
 
 ### Objetivo Geral:
@@ -43,11 +36,6 @@ Desenvolver um sistema de análise computacional para processar as característi
 ## Justificativa
 
 A estimativa de sexo a partir do crânio é uma ferramenta essencial em diversas áreas, incluindo antropologia forense, arqueologia, estudos biológicos e medicina legal. A falta de métodos padronizados e confiáveis pode afetar a precisão das análises. Desenvolver um método científico e rigoroso para estimativa de sexo contribuirá significativamente para essas áreas, permitindo uma identificação mais rápida e precisa.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
