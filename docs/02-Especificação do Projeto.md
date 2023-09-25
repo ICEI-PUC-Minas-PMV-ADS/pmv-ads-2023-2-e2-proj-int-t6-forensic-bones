@@ -49,7 +49,8 @@ A partir da compreensão das personas identificadas para o projeto "Estimativa d
 |RF-01| Gerenciar cadastro antropológico. | ALTA | 
 |RF-02| Gerenciar inventário ósseo.  | ALTA |
 |RF-03| Registrar a contagem óssea.  | BAIXA |
-média|RF-05| Armazenar fotografias dos achados patológicos.  | MÉDIA |
+|RF-04| Gerenciar imagens para inventário ósseo.  | MÉDIA |
+|RF-05| Armazenar fotografias dos achados patológicos.  | MÉDIA |
 |RF-06| Consulta de imagem óssea para classificação de formato| MÉDIA |
 |RF-07| Disponibilizar guia de referência didático visual para consulta.   | ALTA |
 |RF-08| Classificar os marcadores ósseos para estimativa de sexo.  | ALTA |
