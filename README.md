@@ -5,7 +5,7 @@
 
 `SEGUNDO SEMESTRE`
 
-COLE O VIDEO AQUI, AZENCLEVER!
+<li><a href="https://drive.google.com/file/d/1YCLgHBhCRKph4dP90IQDoBHCY6FzhXvn/view?usp=sharing"> Vídeo do projeto!</a></li>
 
 ## Integrantes
 
