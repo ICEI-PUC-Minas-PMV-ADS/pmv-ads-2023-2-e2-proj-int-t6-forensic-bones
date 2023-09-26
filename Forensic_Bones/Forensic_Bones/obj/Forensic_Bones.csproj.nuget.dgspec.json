@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {}
+    "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {
+    "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
+        "projectUniqueName": "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
         "projectName": "Forensic_Bones",
-        "projectPath": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
+        "projectPath": "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
         "packagesPath": "C:\\Users\\Breno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\obj\\",
+        "outputPath": "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Breno\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,32 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
