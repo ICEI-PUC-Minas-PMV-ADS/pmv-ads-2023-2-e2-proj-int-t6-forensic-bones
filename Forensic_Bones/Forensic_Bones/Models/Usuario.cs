@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Forensic_Bones.Models
 {
+    [Table("Usuarios")]
     public class Usuario
     {
         [Key]

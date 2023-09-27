@@ -1,3 +1,6 @@
+using Forensic_Bones.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +8,10 @@ builder.Services.AddControllersWithViews();
 
 //add razor pages
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+// conecting to database
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 
 var app = builder.Build();
