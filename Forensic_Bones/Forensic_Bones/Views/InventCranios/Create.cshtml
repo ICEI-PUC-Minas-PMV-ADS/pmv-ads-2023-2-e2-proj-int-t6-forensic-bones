@@ -1,0 +1,147 @@
+﻿@model Forensic_Bones.Models.InventCranio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>InventCranio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="InventEsqueletoId" class="control-label"></label>
+                <select asp-for="InventEsqueletoId" class ="form-control" asp-items="ViewBag.InventEsqueletoId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Frontal" class="control-label"></label>
+                <input asp-for="Frontal" class="form-control" />
+                <span asp-validation-for="Frontal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ocipital" class="control-label"></label>
+                <input asp-for="Ocipital" class="form-control" />
+                <span asp-validation-for="Ocipital" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Esfenoide" class="control-label"></label>
+                <input asp-for="Esfenoide" class="form-control" />
+                <span asp-validation-for="Esfenoide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Maxilar" class="control-label"></label>
+                <input asp-for="Maxilar" class="form-control" />
+                <span asp-validation-for="Maxilar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Palatino" class="control-label"></label>
+                <input asp-for="Palatino" class="form-control" />
+                <span asp-validation-for="Palatino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vomer" class="control-label"></label>
+                <input asp-for="Vomer" class="form-control" />
+                <span asp-validation-for="Vomer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParietalEsquerdo" class="control-label"></label>
+                <input asp-for="ParietalEsquerdo" class="form-control" />
+                <span asp-validation-for="ParietalEsquerdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemporalEsquerdo" class="control-label"></label>
+                <input asp-for="TemporalEsquerdo" class="form-control" />
+                <span asp-validation-for="TemporalEsquerdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConchaNasalInferiorEsquerda" class="control-label"></label>
+                <input asp-for="ConchaNasalInferiorEsquerda" class="form-control" />
+                <span asp-validation-for="ConchaNasalInferiorEsquerda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EtmoideEsquerdo" class="control-label"></label>
+                <input asp-for="EtmoideEsquerdo" class="form-control" />
+                <span asp-validation-for="EtmoideEsquerdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LacrimalEsquerdo" class="control-label"></label>
+                <input asp-for="LacrimalEsquerdo" class="form-control" />
+                <span asp-validation-for="LacrimalEsquerdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NasalEsquerdo" class="control-label"></label>
+                <input asp-for="NasalEsquerdo" class="form-control" />
+                <span asp-validation-for="NasalEsquerdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZigomaticoEsquerdo" class="control-label"></label>
+                <input asp-for="ZigomaticoEsquerdo" class="form-control" />
+                <span asp-validation-for="ZigomaticoEsquerdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParietalDireito" class="control-label"></label>
+                <input asp-for="ParietalDireito" class="form-control" />
+                <span asp-validation-for="ParietalDireito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemporalDireito" class="control-label"></label>
+                <input asp-for="TemporalDireito" class="form-control" />
+                <span asp-validation-for="TemporalDireito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConchaNasalInferiorDireita" class="control-label"></label>
+                <input asp-for="ConchaNasalInferiorDireita" class="form-control" />
+                <span asp-validation-for="ConchaNasalInferiorDireita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Etmoide" class="control-label"></label>
+                <input asp-for="Etmoide" class="form-control" />
+                <span asp-validation-for="Etmoide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LacrimalDireito" class="control-label"></label>
+                <input asp-for="LacrimalDireito" class="form-control" />
+                <span asp-validation-for="LacrimalDireito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZigomaticoDireito" class="control-label"></label>
+                <input asp-for="ZigomaticoDireito" class="form-control" />
+                <span asp-validation-for="ZigomaticoDireito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hioide" class="control-label"></label>
+                <input asp-for="Hioide" class="form-control" />
+                <span asp-validation-for="Hioide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CartilagemDaTireoide" class="control-label"></label>
+                <input asp-for="CartilagemDaTireoide" class="form-control" />
+                <span asp-validation-for="CartilagemDaTireoide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mandibula" class="control-label"></label>
+                <input asp-for="Mandibula" class="form-control" />
+                <span asp-validation-for="Mandibula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {}
+    "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {
+    "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
+        "projectUniqueName": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
         "projectName": "Forensic_Bones",
-        "projectPath": "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
+        "projectPath": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
         "packagesPath": "C:\\Users\\Breno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Breno\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\obj\\",
+        "outputPath": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Breno\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,6 +64,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
