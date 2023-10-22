@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Forensic_Bones",
+    "\\Forensic_Bones\\Forensic_Bones",
+    "\\Forensic_Bones\\Forensic_Bones\\Views",
+    "\\Forensic_Bones\\Forensic_Bones\\Views\\InventEsqueletos"
   ],
-  "SelectedNode": "\\Forensic_Bones.sln",
+  "SelectedNode": "\\Forensic_Bones\\Forensic_Bones\\Views\\_ViewImports.cshtml",
   "PreviewInSolutionExplorer": false
 }
