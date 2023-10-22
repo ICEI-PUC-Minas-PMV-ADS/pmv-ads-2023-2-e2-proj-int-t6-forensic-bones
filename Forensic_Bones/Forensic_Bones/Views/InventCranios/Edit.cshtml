@@ -330,9 +330,13 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn custom-button-card" />
-            </div>
+            <form asp-action="Edit" asp-route-id="@Model.Id">
+                
+                <div class="form-group">
+                    <input type="submit" value="Salvar" class="btn custom-button-card" />
+                </div>
+            </form>
+
         </form>
     </div>
 </div>
