@@ -3,71 +3,8 @@
 @{
     ViewData["Title"] = "Index";
 }
-<div class="container mt-5">
-    <ul class="nav nav-tabs" id="myTabs" role="tablist">
-        @{
-            int contador = 1;
-        }
-        @foreach (var item in Model)
-        {
-            <li class="nav-item" role="presentation">
-                <a class="nav-link @((contador == 1) ? "active" : "")" id="tab-@contador" data-bs-toggle="tab" href="#pane-@contador" role="tab" aria-controls="pane-@contador" aria-selected="@contador == 1">
-                    Foto @contador
-                </a>
-            </li>
-            contador++;
-        }
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" href="@Url.Action("Create")">
-                +
-            </a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        @{
-            contador = 1; 
-        }
-        @foreach (var item in Model)
-        {
-            <div class="tab-pane fade @if (contador == 1) {
-        <text>show active</text>
-    }" id="pane-@contador" role="tabpanel" aria-labelledby="tab-@contador">
-                    <div class="card text-center d-flex mx-auto m-5 col-lg-6 col-md-12 col-sm-12">
-                        <div class="card-header">
-                            <b>Fotografias do Esqueleto</b>
-                        </div>
-                        <div class="card">
-                            <div class="NumeroRelatorio text-center d-flex mx-auto mt-5">
-                                <label for="NumRelatorio" class="col-sm-4">Relatório:</label>
-                                <input type="text" id="" name="Relatorio" class="caixa-texto text-center col-4" readonly value="@item.InventEsqueletoId" />
-                            </div>
-                            <div class="ImgEsqueleto text-center d-flex align-content-center mx-auto mt-5">
-                                <label for="date" class="card-img"></label>
-                                <img src="@item.Url" alt="Imagem" class="img-thumbnail d-flex" style="max-width: 100%;" />
-                            </div>
-                            <div class="buttonCrud mt-5 mb-5 d-flex mx-auto align-content-center">
-                                <button type="button" class="btn btn-secondary me-1" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
-                                    <a asp-action="Edit" asp-route-id="@item.id" style="text-decoration: none; color: white;">Alterar</a>
-                                </button>
-                                <button type="button" class="btn btn-danger" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Deletar">
-                                    <a asp-action="Delete" asp-route-id="@item.id" style="text-decoration: none; color: white;">Remover</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            contador++;
-        }
-    </div>
-</div>
 
-
-
-
-
-
-
-<!--<div class="TituloInvCranio text-center align-items-center d-flex mt-2">
+<div class="TituloInvCranio text-center align-items-center d-flex mt-2">
     <div>
         <a class="btn custom-button-card m-3" asp-action="Create">Adicionar Foto</a>
     </div>
@@ -98,4 +35,51 @@
             </div>
         </div>
     }
+</div>
+
+<!--<div class="container mt-5">
+    <div class="card text-center d-flex mx-auto m-5 col-lg-6 col-md-12 col-sm-12">
+        <div class="card-header">
+            <b>Fotografias do Esqueleto</b>
+        </div>
+        <div class="NumeroRelatorio text-center d-flex mx-auto mt-5">
+            <label for="NumRelatorio" class="col-sm-4">Relatório:</label>
+            <input type="text" id="" name="Relatorio" class="caixa-texto text-center col-4" readonly value="@Model.FirstOrDefault()?.InventEsqueletoId" />
+        </div>
+        <div class="ImgEsqueleto text-center d-flex align-content-center mx-auto mt-5">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
+@{
+    int contador = 0;
+}
+@foreach (var imagem in Model)
+{
+                            <div class="carousel-item @((contador == 0) ? "active" : "")">
+                                <div class="ImgEsqueleto text-center d-flex align-content-center mx-auto mt-5">
+                                    <img src="@imagem.Url" alt="Imagem" class="img-thumbnail d-block w-100" />
+                                </div>
+                            </div>
+    contador++;
+}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="buttonCrud mt-5 mb-5 d-flex mx-auto align-content-center">
+            <button type="button" class="btn btn-secondary me-1" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                <a asp-action="Edit" asp-route-id="@Model.FirstOrDefault()?.id" style="text-decoration: none; color: white;">Alterar</a>
+            </button>
+
+            <button type="button" class="btn btn-danger" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Deletar">
+                <a asp-action="Delete" asp-route-id="@Model.FirstOrDefault()?.id" style="text-decoration: none; color: white;">Remover</a>
+            </button>
+        </div>
+    </div>
 </div>-->

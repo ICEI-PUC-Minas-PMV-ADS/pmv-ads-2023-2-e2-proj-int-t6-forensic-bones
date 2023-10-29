@@ -8,9 +8,6 @@
     <h4><b>Relatório de Antropologia Forense</b></h4>
 </div>
 <hr />
-<div>
-    <a class="btn custom-button-card m-3" asp-action="Index">Voltar</a>
-</div>
 
 <div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
     <div class="card-content">
@@ -31,7 +28,8 @@
                     <span asp-validation-for="Data" class="text-danger"></span>
                 </div>
                 <div class="card-img-bottom">
-                    <button type="submit" value="Create" class="btn custom-button-card">Criar</button>
+                    <a class="btn btn-secondary m-3" asp-action="Index">Voltar</a>
+                    <button type="submit" value="Create" class="btn custom-button-card">Adicionar</button>   
                 </div>
             </form>
         </div>

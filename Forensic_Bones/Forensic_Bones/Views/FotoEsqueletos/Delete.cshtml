@@ -13,15 +13,15 @@
             <label for="NumRelatorio" class="col-sm-4">Relatório:</label>
             <input type="text" id="" name="Relatorio" class="caixa-texto text-center col-4" readonly value="@Model.InventEsqueletoId" />
         </div>
-        <div class="ImgEsqueleto text-center d-flex align-content-center mx-auto mt-5">
+        <div class="ImgEsqueleto text-center d-flex align-content-center mx-auto mt-5 col-6">
             <label for="date" class="card-img"></label>
             <img src="@Model.Url" alt="Imagem" class="img-thumbnail d-flex" style="max-width: 100%;" />
         </div>
         <div class="buttonCrud mt-5 mb-5 d-flex mx-auto align-content-center">
             <form asp-action="Delete">
                 <input type="hidden" asp-for="id" />
-                <a asp-action="Index" class="btn btn-secondary" id="cancelDelete" data-bs-toggle="tooltip" data-bs-placement="top" title="Cancelar">Cancelar</a>
-                <button type="submit" class="btn btn-danger me-1" id="deleteItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Deletar">Remover</button>  
+                <a asp-action="Index" class="btn btn-secondary" id="cancelDelete" data-bs-toggle="tooltip" data-bs-placement="top">Cancelar</a>
+                <button type="submit" class="btn btn-danger me-1" id="deleteItem" data-bs-toggle="tooltip" data-bs-placement="top">Remover</button>  
             </form>
         </div>
     </div>

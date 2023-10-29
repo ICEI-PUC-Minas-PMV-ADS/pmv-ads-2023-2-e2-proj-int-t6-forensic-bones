@@ -9,9 +9,6 @@
         <h4><b>Fotografias do Esqueleto</b></h4>
     </div>
     <hr />
-    <div>
-        <a class="btn btn-secondary m-3" asp-action="Index">Voltar</a>
-    </div>
     <div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
         <div class="card-content">
             <div class="card-header">
@@ -34,6 +31,7 @@
                         <span asp-validation-for="Url" class="text-danger"></span>
                     </div>
                     <div class="form-group mt-3">
+                            <a class="btn btn-secondary m-3" asp-action="Index">Cancelar</a>
                         <input type="submit" value="Adicionar" class="btn custom-button-card" />
                     </div>
                 </form>
