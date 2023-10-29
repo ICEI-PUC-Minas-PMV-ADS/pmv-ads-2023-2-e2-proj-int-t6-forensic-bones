@@ -44,22 +44,6 @@ namespace Forensic_Bones.Controllers
             return View(fotoEsqueleto);
         }
 
-        // GET: FotoEsqueletos/Create
-        public IActionResult Create()
-        {
-            ViewData["InventEsqueletoId"] = new SelectList(_context.InventarioEsqueleto, "Id", "Id");
-            return View();
-        }
-
-        // POST: FotoEsqueletos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,InventEsqueletoId,Url")] FotoEsqueleto fotoEsqueleto)
-        {
-            if (ModelState.IsValid)
-            {
                 _context.Add(fotoEsqueleto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -76,18 +60,6 @@ namespace Forensic_Bones.Controllers
                 return NotFound();
             }
 
-            var fotoEsqueleto = await _context.FotografiasEsqueleto.FindAsync(id);
-            if (fotoEsqueleto == null)
-            {
-                return NotFound();
-            }
-            ViewData["InventEsqueletoId"] = new SelectList(_context.InventarioEsqueleto, "Id", "Id", fotoEsqueleto.InventEsqueletoId);
-            return View(fotoEsqueleto);
-        }
-
-        // POST: FotoEsqueletos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,InventEsqueletoId,Url")] FotoEsqueleto fotoEsqueleto)
@@ -115,28 +87,8 @@ namespace Forensic_Bones.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
             ViewData["InventEsqueletoId"] = new SelectList(_context.InventarioEsqueleto, "Id", "Id", fotoEsqueleto.InventEsqueletoId);
-            return View(fotoEsqueleto);
-        }
-
-        // GET: FotoEsqueletos/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.FotografiasEsqueleto == null)
-            {
-                return NotFound();
-            }
-
-            var fotoEsqueleto = await _context.FotografiasEsqueleto
-                .Include(f => f.InventEsqueleto)
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (fotoEsqueleto == null)
-            {
-                return NotFound();
-            }
-
             return View(fotoEsqueleto);
         }
 
@@ -159,9 +111,4 @@ namespace Forensic_Bones.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool FotoEsqueletoExists(int id)
-        {
-          return _context.FotografiasEsqueleto.Any(e => e.id == id);
-        }
-    }
 }
