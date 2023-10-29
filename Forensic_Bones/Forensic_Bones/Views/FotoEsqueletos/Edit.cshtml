@@ -4,34 +4,42 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>FotoEsqueleto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="id" />
-            <div class="form-group">
-                <label asp-for="InventEsqueletoId" class="control-label"></label>
-                <select asp-for="InventEsqueletoId" class="form-control" asp-items="ViewBag.InventEsqueletoId"></select>
-                <span asp-validation-for="InventEsqueletoId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Url" class="control-label"></label>
-                <input asp-for="Url" class="form-control" />
-                <span asp-validation-for="Url" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
 <div>
-    <a asp-action="Index">Back to List</a>
+    <div class="tituloPage m-3 text-center">
+        <h4><b>Fotografias do Esqueleto</b></h4>
+    </div>
+    <hr />
+    <div>
+        <a class="btn btn-secondary m-3" asp-action="Index">Voltar</a>
+    </div>
+    <div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
+        <div class="card-content">
+            <div class="card-header">
+                <h5 class="card-title" id="novoRelatorioModalLabel">Fotografias do esquelto</h5>
+            </div>
+            <div class="card-body d-flex justify-content-center ">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="NumeroRelatorio text-center d-flex mt-5 col-7 mb-3">
+                        <label for="NumRelatorio" class="NumRelatorio me-1">Relatório:</label>
+                        <select asp-for="InventEsqueletoId" class="form-control text-center" readonly asp-items="ViewBag.InventEsqueletoId"></select>
+                    </div>
+                    <!--<div class="mb-3 mt-5">
+                        <label asp-for="Url" for="formFile" class="form-label">Anexar imagens</label>
+                        <input asp-for="Url" class="form-control" type="file" id="formFile">
+                    </div>-->
+                    <div class="form-group">
+                        <label asp-for="Url" class="control-label">Anexar endereço de imagens</label>
+                        <input asp-for="Url" class="form-control" />
+                        <span asp-validation-for="Url" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="submit" value="Salvar" class="btn custom-button-card" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

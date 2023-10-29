@@ -3,9 +3,14 @@
     "",
     "\\Forensic_Bones",
     "\\Forensic_Bones\\Forensic_Bones",
+    "\\Forensic_Bones\\Forensic_Bones\\Models",
     "\\Forensic_Bones\\Forensic_Bones\\Views",
-    "\\Forensic_Bones\\Forensic_Bones\\Views\\InventEsqueletos"
+    "\\Forensic_Bones\\Forensic_Bones\\Views\\FotoEsqueletos",
+    "\\Forensic_Bones\\Forensic_Bones\\Views\\Home",
+    "\\Forensic_Bones\\Forensic_Bones\\Views\\InventCranios",
+    "\\Forensic_Bones\\Forensic_Bones\\Views\\InventEsqueletos",
+    "\\Forensic_Bones\\Forensic_Bones\\Views\\MarcadorCranios"
   ],
-  "SelectedNode": "\\Forensic_Bones\\Forensic_Bones\\Views\\_ViewImports.cshtml",
+  "SelectedNode": "\\Forensic_Bones\\Forensic_Bones\\Views\\MarcadorCranios\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

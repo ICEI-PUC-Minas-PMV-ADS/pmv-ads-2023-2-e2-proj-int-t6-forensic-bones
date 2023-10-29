@@ -18,9 +18,12 @@ namespace Forensic_Bones.Models
         public int Maxilar { get; set; }
         public int Palatino { get; set; }
         public int Vomer { get; set; }
-        public int ParietalEsquerdo { get; set; }
 
+        [Display(Name="Parietal Esquerdo")]
+        public int ParietalEsquerdo { get; set; }
+        [Display(Name ="Temporal Esquerdo")]
         public int TemporalEsquerdo { get; set; }
+        [Display(Name ="Concha Nasal Inferior Esquerda")]
         public int ConchaNasalInferiorEsquerda { get; set; }
         public int EtmoideEsquerdo { get; set; }
         public int LacrimalEsquerdo { get; set; }

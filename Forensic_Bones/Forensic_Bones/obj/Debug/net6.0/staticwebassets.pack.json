@@ -17,6 +17,30 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\AreaGlabela.png",
+      "PackagePath": "staticwebassets\\lib\\Images\\AreaGlabela.png"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\CristaNucal.png",
+      "PackagePath": "staticwebassets\\lib\\Images\\CristaNucal.png"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\EminenciaMentoniana.png",
+      "PackagePath": "staticwebassets\\lib\\Images\\EminenciaMentoniana.png"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\FotoEsqueleto.jpg",
+      "PackagePath": "staticwebassets\\lib\\Images\\FotoEsqueleto.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\FotoEsqueleto2jpg.jpg",
+      "PackagePath": "staticwebassets\\lib\\Images\\FotoEsqueleto2jpg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\FotoEsqueletoPe.jpg",
+      "PackagePath": "staticwebassets\\lib\\Images\\FotoEsqueletoPe.jpg"
+    },
+    {
       "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\ImgLab1.jpg",
       "PackagePath": "staticwebassets\\lib\\Images\\ImgLab1.jpg"
     },
@@ -27,6 +51,14 @@
     {
       "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\ImgLab3.jpg",
       "PackagePath": "staticwebassets\\lib\\Images\\ImgLab3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\ProcessoMastoide.png",
+      "PackagePath": "staticwebassets\\lib\\Images\\ProcessoMastoide.png"
+    },
+    {
+      "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\SupraOrbital.png",
+      "PackagePath": "staticwebassets\\lib\\Images\\SupraOrbital.png"
     },
     {
       "Id": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\wwwroot\\lib\\Images\\logo3.png",

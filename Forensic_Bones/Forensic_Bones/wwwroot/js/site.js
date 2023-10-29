@@ -2,3 +2,10 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+
+    document.getElementById('caracteristicaLabel').addEventListener('click', function () {
+        var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    modal.show();
+    });
+
