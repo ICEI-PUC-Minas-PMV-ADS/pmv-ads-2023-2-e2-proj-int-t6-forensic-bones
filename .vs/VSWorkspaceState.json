@@ -3,14 +3,9 @@
     "",
     "\\Forensic_Bones",
     "\\Forensic_Bones\\Forensic_Bones",
-    "\\Forensic_Bones\\Forensic_Bones\\Models",
-    "\\Forensic_Bones\\Forensic_Bones\\Views",
-    "\\Forensic_Bones\\Forensic_Bones\\Views\\FotoEsqueletos",
-    "\\Forensic_Bones\\Forensic_Bones\\Views\\Home",
-    "\\Forensic_Bones\\Forensic_Bones\\Views\\InventCranios",
-    "\\Forensic_Bones\\Forensic_Bones\\Views\\InventEsqueletos",
-    "\\Forensic_Bones\\Forensic_Bones\\Views\\MarcadorCranios"
+    "\\Forensic_Bones\\Forensic_Bones\\Controllers",
+    "\\Forensic_Bones\\Forensic_Bones\\Models"
   ],
-  "SelectedNode": "\\Forensic_Bones\\Forensic_Bones\\Views\\MarcadorCranios\\Create.cshtml",
+  "SelectedNode": "\\Forensic_Bones\\Forensic_Bones\\Controllers\\InventEsqueletosController.cs",
   "PreviewInSolutionExplorer": false
 }
