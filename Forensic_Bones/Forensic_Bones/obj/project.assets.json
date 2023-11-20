@@ -11179,19 +11179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Breno\\.nuget\\packages\\": {}
+    "C:\\Users\\ljbrandao\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
+      "projectUniqueName": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
       "projectName": "Forensic_Bones",
-      "projectPath": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
-      "packagesPath": "C:\\Users\\Breno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Breno\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t6-forensic-bones\\Forensic_Bones\\Forensic_Bones\\obj\\",
+      "projectPath": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\Forensic_Bones.csproj",
+      "packagesPath": "C:\\Users\\ljbrandao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ljbrandao\\Downloads\\forensic-bones\\Forensic_Bones\\Forensic_Bones\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Breno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ljbrandao\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11199,7 +11203,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11266,7 +11269,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

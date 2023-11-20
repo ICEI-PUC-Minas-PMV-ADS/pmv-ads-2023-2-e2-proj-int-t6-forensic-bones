@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Forensic_Bones",
+    "\\Forensic_Bones\\Forensic_Bones",
+    "\\Forensic_Bones\\Forensic_Bones\\Controllers",
+    "\\Forensic_Bones\\Forensic_Bones\\Models"
   ],
-  "SelectedNode": "\\Forensic_Bones.sln",
+  "SelectedNode": "\\Forensic_Bones\\Forensic_Bones\\Controllers\\InventEsqueletosController.cs",
   "PreviewInSolutionExplorer": false
 }

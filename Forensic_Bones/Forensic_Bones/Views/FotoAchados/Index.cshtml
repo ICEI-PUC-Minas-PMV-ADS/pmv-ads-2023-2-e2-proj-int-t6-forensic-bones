@@ -3,39 +3,35 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="TituloInvCranio text-center align-items-center d-flex mt-2">
+    <div>
+        <a class="btn custom-button-card m-3" asp-action="Create">Adicionar Foto</a>
+    </div>
+</div>
+<div class="card text-center d-flex mx-auto m-5 col-lg-6 col-md-12 col-sm-12">
+    <div class="card-header">
+        <b>Fotografias das Alterações do Crânio</b>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="NumeroRelatorio text-center d-flex mx-auto mt-5">
+                <label for="NumRelatorio" class="col-sm-4">Relatório:</label>
+                <input type="text" id="" name="Relatorio" class="caixa-texto text-center col-4" readonly value="@item.InventEsqueletoId" />
+            </div>
+            <div class="ImgEsqueleto text-center d-flex align-content-center mx-auto mt-5">
+                <label for="date" class="card-img"></label>
+                <img src="@item.Url" alt="Imagem" class="img-thumbnail d-flex" style="max-width: 100%;" />
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.InventEsqueleto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Url)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.InventEsqueleto.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Url)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            </div>
+            <div class="buttonCrud mt-5 mb-5 d-flex mx-auto align-content-center">
+                <button type="button" class="btn btn-secondary me-1" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                    <a asp-action="Edit" asp-route-id="@item.id" style="text-decoration: none; color: white;">Alterar</a>
+                </button>
+                <button type="button" class="btn btn-danger" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Deletar">
+                    <a asp-action="Delete" asp-route-id="@item.id" style="text-decoration: none; color: white;">Remover</a>
+                </button>
+            </div>
+        </div>
+    }
+</div>

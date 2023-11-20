@@ -1,173 +1,383 @@
 ﻿@model IEnumerable<Forensic_Bones.Models.InventCranio>
 
-@{
+    @{
     ViewData["Title"] = "Index";
-}
+    }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.InventEsqueleto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Frontal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ocipital)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Esfenoide)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Maxilar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Palatino)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vomer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ParietalEsquerdo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TemporalEsquerdo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConchaNasalInferiorEsquerda)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EtmoideEsquerdo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LacrimalEsquerdo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NasalEsquerdo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ZigomaticoEsquerdo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ParietalDireito)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TemporalDireito)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConchaNasalInferiorDireita)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Etmoide)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LacrimalDireito)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ZigomaticoDireito)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hioide)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CartilagemDaTireoide)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mandibula)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.InventEsqueleto.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Frontal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ocipital)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Esfenoide)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Maxilar)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Palatino)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Vomer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ParietalEsquerdo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TemporalEsquerdo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConchaNasalInferiorEsquerda)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EtmoideEsquerdo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LacrimalEsquerdo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NasalEsquerdo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ZigomaticoEsquerdo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ParietalDireito)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TemporalDireito)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConchaNasalInferiorDireita)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Etmoide)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LacrimalDireito)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ZigomaticoDireito)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hioide)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CartilagemDaTireoide)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mandibula)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-tabs" id="inventTabs" role="tablist">
+                @foreach (var item in Model)
+                {
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link @(item == Model.First() ? "active" : "")" id="invent-@item.InventEsqueleto.Id-tab" data-bs-toggle="tab" href="#invent-@item.InventEsqueleto.Id" role="tab" aria-controls="invent-@item.InventEsqueleto.Id" aria-selected="false">Inventário @item.InventEsqueleto.Id</a>
+                    </li>
+                }
+                <li class="nav-item ml-auto" role="presentation">
+                    <a class="nav-link" asp-action="Create" aria-controls="add-content" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="top" title="Criar novo relatório">+</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="tab-content" id="inventTabsContent">
+                @foreach (var item in Model)
+                {
+                    <div class="tab-pane fade @(item == Model.First() ? "show active" : "")" id="invent-@item.InventEsqueleto.Id" role="tabpanel" aria-labelledby="invent-@item.InventEsqueleto.Id-tab">
+                        <div class="InventCranioTitle align-items-center d-flex flex-column m-2">
+                            <h1>Inventário do crânio</h1>
+                        </div>
+                        <p>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Editar</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Remover</a>
+                        </p>
+                        <div class="table-responsive align-items-center d-flex col-12">
+                            <table class="table">
+                                <thead class="TheadTitle  text-center">
+
+                                    <tr>
+                                        <th>Osso</th>
+                                        <th>Quantidade</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center align-middle">Frontal</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Frontal)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Ocipital</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Ocipital)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Esfenóide</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Esfenoide)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Maxilar</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Maxilar)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Palatino</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Palatino)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Vômer</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Vomer)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Parietal Esquerdo</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ParietalEsquerdo)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Temporal Esquerdo</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.TemporalEsquerdo)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Concha Nasal Inferior Esquerda</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ConchaNasalInferiorEsquerda)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Etmoide Esquerdo</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.EtmoideEsquerdo)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Lacrimal Esquerdo</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.LacrimalEsquerdo)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Nasal Esquerdo</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.NasalEsquerdo)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Zigomático Esquerdo</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ZigomaticoEsquerdo)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Parietal Direito</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ParietalDireito)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Temporal Direito</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.TemporalDireito)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Concha Nasal Inferior Direita</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ConchaNasalInferiorDireita)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Etmoide Direito</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Etmoide)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Lacrimal Direito</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.LacrimalDireito)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Zigomático Direito</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ZigomaticoDireito)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Hióide</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ParietalDireito)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Cartilagem da Tireoide</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.CartilagemDaTireoide)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Mandíbula</td>
+                                        <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.Mandibula)</td>
+                                        <td>
+                                            <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Descricao</textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive align-items-center d-flex  m-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.InventEsqueleto)
+                </th>
+        </thead>
+        <thead class="TableInventEsqueleto d-none">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.InventEsqueleto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Frontal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ocipital)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Esfenoide)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Maxilar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Palatino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Vomer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParietalEsquerdo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TemporalEsquerdo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConchaNasalInferiorEsquerda)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EtmoideEsquerdo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LacrimalEsquerdo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NasalEsquerdo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ZigomaticoEsquerdo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParietalDireito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TemporalDireito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConchaNasalInferiorDireita)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Etmoide)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LacrimalDireito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ZigomaticoDireito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hioide)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CartilagemDaTireoide)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mandibula)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InventEsqueleto.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Frontal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ocipital)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Esfenoide)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Maxilar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Palatino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vomer)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParietalEsquerdo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TemporalEsquerdo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConchaNasalInferiorEsquerda)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EtmoideEsquerdo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LacrimalEsquerdo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NasalEsquerdo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ZigomaticoEsquerdo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParietalDireito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TemporalDireito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConchaNasalInferiorDireita)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Etmoide)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LacrimalDireito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ZigomaticoDireito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hioide)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CartilagemDaTireoide)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mandibula)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+</div>
     </tbody>
 </table>

@@ -3,8 +3,94 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-tabs" id="inventTabs" role="tablist">
+                @foreach (var item in Model)
+                {
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link @(item == Model.First() ? "active" : "")" id="invent-@item.InventCranio.Id-tab" data-bs-toggle="tab" href="#invent-@item.InventCranio.Id" role="tab" aria-controls="invent-@item.InventCranio.Id" aria-selected="false">Relatório: @item.InventCranio.Id</a>
+                    </li>
+                }
+                <li class="nav-item ml-auto" role="presentation">
+                    <a class="nav-link" asp-action="Create" aria-controls="add-content" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="top" title="Criar novo relatório">+</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="tab-content" id="inventTabsContent">
+                @foreach (var item in Model)
+                {
+                <div class="tab-pane fade @(item == Model.First() ? "show active" : "")" id="invent-@item.InventCranio.Id" role="tabpanel" aria-labelledby="invent-@item.InventCranio.Id-tab">
+                    <div class="MarcadorCranioTitle align-items-center d-flex flex-column m-2">
+                            <h1>Estimativa do Sexo pelo Crânio</h1>
+                        </div>
+                        <p>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Editar</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Remover</a>
+                        </p>
+                    
+<div class="table-responsive align-items-center d-flex col-12">
+    <table class="table">
+        <thead class="TheadTitle  text-center">
 
-<h1>Index</h1>
+            <tr>
+                <th>Características</th>
+                <th>Sexo</th>
+                <th>Observações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center align-middle">Cristal Nucal</td>
+                <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.CristalNucal)</td>
+                <td>
+                    <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Observacoes</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">Processo Mastóide</td>
+                <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.ProcessoMastoide)</td>
+                <td>
+                    <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Observacoes</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">Eminência Mentoniana</td>
+                <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.EminenciaMentoniana)</td>
+                <td>
+                    <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Observacoes</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">Margem Supra-Orbital</td>
+                <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.SupraOrbital)</td>
+                <td>
+                    <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Observacoes</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">Área da Glabela</td>
+                <td class="text-center align-middle">@Html.DisplayFor(modelItem => item.AreaGlabela)</td>
+                <td>
+                    <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@item.Observacoes</textarea>
+                </td>
+            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+</div>
+
+<!--<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -68,4 +154,4 @@
         </tr>
 }
     </tbody>
-</table>
+</table>-->

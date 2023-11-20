@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Forensic_Bones.Models
 {
-    [Table("FotografiasEsqueleto")]    
+    [Table("FotografiasEsqueleto")]
     public class FotoEsqueleto
     {
         [Key]

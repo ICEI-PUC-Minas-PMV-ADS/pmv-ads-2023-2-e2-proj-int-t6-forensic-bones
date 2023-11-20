@@ -14,8 +14,5 @@ namespace Forensic_Bones.Models
 
         [Required(ErrorMessage = "Campo obrigatório")]
         public string Url { get; set; }
-
-
-
     }
 }
