@@ -1,5 +1,5 @@
 # Plano de Testes de Usabilidade
-## Plano de Testes de Usabilidade (Método de Inspeção Heurística) - Software "Forensic Bones"
+## Plano de Testes de Usabilidade (Método de Inspeção Heurística) - "Forensic Bones"
 
 ### Objetivos da Avaliação de Usabilidade
 
