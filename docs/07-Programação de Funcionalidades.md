@@ -8,21 +8,22 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| Emitir um relatório de tarefas no mês   | relatorio.shtml |
+|RF-001| Gerenciar o cadastro antropologico. | Relatorio.shtml / Relatorio.cs / RelatoriosController.cs | 
+|RF-002| Gerenciar inventário ósseo.   | Inventarios.shtml / InventarioEsqueleto.cs / InventariosController.cs |
+|RF-003| Registrar contagem óssea.   | Inventarios.shtml / InventarioEsqueleto.cs / InventariosController.cs |
+|RF-004| Gerenciar imagens para inventário ósseo.   | Inventarios.shtml / InventarioEsqueleto.cs / InventariosController.cs |
+|RF-005| Armazenar fotografias dos achados patológicos.   | Inventarios.shtml / InventarioEsqueleto.cs / InventariosController.cs |
+|RF-006| Consulta de imagem óssea para classificação de formato.   | MarcadoresCranio.shtml / MarcadoresCranio.cs / MarcadoresCraniosController.cs |
+|RF-007| Disponibilizar guia de referência didático visual para consulta.   | MarcadoresCranio.shtml / MarcadoresCranio.cs / MarcadoresCraniosController.cs |
+|RF-008| Classificar os marcadores ósseos para estimativa de sexo.  | MarcadoresCranio.shtml / MarcadoresCranio.cs / MarcadoresCraniosController.cs |
+|RF-009| Calcular Sexo a partir das características anatômicas dos ossos do crânio.   | MarcadoresCranio.shtml / MarcadoresCranio.cs / MarcadoresCraniosController.cs |
+|RF-010| Gerenciar login.   | Usuario.shtml / Usuário.cs / UsuárioController.cs |
+|RF-011| Gerenciar relatórios.   | Relatorio.shtml / Relatorio.cs / RelatoriosController.cs |
+
 
 # Instruções de acesso
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Os links de acesso serão disponibilizados aqui a medida que forem alocados no github.
+Usuário de teste: Gesonel
+Senha: MestreDosDisfarces
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
-
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
