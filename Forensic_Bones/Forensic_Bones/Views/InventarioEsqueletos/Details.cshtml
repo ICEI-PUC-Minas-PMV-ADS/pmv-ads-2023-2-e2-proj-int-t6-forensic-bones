@@ -1,0 +1,36 @@
+﻿@model Forensic_Bones.Models.InventarioEsqueleto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>InventarioEsqueleto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FotoEsqueleto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FotoEsqueleto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ObservacoesEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ObservacoesEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Relatorio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Relatorio.Codigo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.InventarioEsqueletoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
