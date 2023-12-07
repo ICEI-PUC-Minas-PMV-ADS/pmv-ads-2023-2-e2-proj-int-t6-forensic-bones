@@ -1,0 +1,226 @@
+﻿@model IEnumerable<Forensic_Bones.Models.InventarioCranio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="tituloPage m-3 text-center">
+    <h4><b>RELATÓRIO DE ANTROPOLOGIA FORENSE - INVENTÁRIO DO CRÂNIO</b></h4>
+
+</div>
+<hr />
+<div class="btn-card mb-3 ms-5 mx-auto">
+    <a asp-action="Create" class="btn custom-button-card">Novo Inventário</a>
+</div>
+
+<div class="container pb-3">
+    @foreach (var item in Model)
+    {
+        <div class="card mb-3 text-center">
+            <div class="card-header text-center">
+                <h5 class="card-title" id="">Relatório: <b>@Html.DisplayFor(modelItem => item.Relatorio.Codigo)</b></h5>
+            </div>
+            <div class="card-body text-center">
+
+                <h5 class="card-title mt-3 pb-5">Fotos do Crânio</h5>
+                <p class="card-text">
+                    <img src="@item.FotoCranio" alt="Imagem" class="img-thumbnail d-flex mx-auto" style="max-width: 100%;" />
+                    Foto: @Html.DisplayFor(modelItem => item.FotoCranio)
+                </p>
+                <hr />
+                <h5 class="card-title mb-3">Ossos</h5>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Frontal: <b>@item.Frontal</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Frontal:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.FrontalDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Ocipital:  <b>@item.Ocipital</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Ocipital:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.OcipitalDesc</textarea>
+                </div>
+                <hr />
+
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Esfenoide:  <b>@item.Esfenoide</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Esfenoide:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.EsfenoideDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Maxilar: <b>@item.Maxilar</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Maxilar:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.MaxilarDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Vomer: <b>@item.Vomer</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Vomer:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.VomerDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Parietal Esquerdo: <b>@item.ParietalEsq</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Parietal Esquerdo:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.ParietalEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Temporal Esquerdo: <b>@item.TemporalEsq</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Temporal Esquerdo:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.TemporalEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Concha Nasal Esquerda: <b>@item.ConchaNasalEsq</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Concha Nasal Esquerda:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.ConchaNasalEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Etmoide Esquerdo: <b>@item.EtmoideEsq</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Etmoide Esquerdo:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.EtmoideEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Lacrimal Esquerdo: <b>@item.LacrimalEsq</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Lacrimal Esquerdo:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.LacrimalEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Nasal Esquerdo: <b>@item.NasalEsq</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Etmoide Esquerdo:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.NasalEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Zigomatico Esquerdo: <b>@item.ZigomaticoEsq</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Zigomatico Esquerdo:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.ZigomaticoEsqDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Parietal Direito: <b>@item.ParietalDir</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Parietal Direito:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.ParietalDirDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Temporal Direito: <b>@item.TemporalDir</b></label>
+
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Temporal Direito:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.TemporalDirDesc</textarea>
+                </div>
+                <hr />
+
+                <div class="form-group mb-3 col-8 mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Concha Nasal Direita: <b>@item.ConchaNasalDir</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Concha Nasal Direita:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.ConchaNasalDirDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3  mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Etmoide Direito: <b>@item.EtmoideDir</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Etmoide Direito:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.EtmoideDirDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3  mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Lacrimal Direito: <b>@item.EtmoideDir</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Lacrimal Direito:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.LacrimalDirDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3  mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Zigomatico Direito: <b>@item.ZigomaticoDir</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Zigomatico Direito:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.ZigomaticoDirDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3  mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Hioide: <b>@item.Hioide</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Hioide:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.HioideDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3  mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Cartilagem Tireoide: <b>@item.CartilagemTireoide</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Cartilagem Tireoide:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.CartilagemTireoideDesc</textarea>
+                </div>
+                <hr />
+                <div class="form-group mb-3  mx-auto col-8">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Mandíbula: <b>@item.Mandibula</b></label>
+                </div>
+                <div class="Observacoes align-content-start  m-1">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Descrição Mandíbula:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.MandibulaDesc</textarea>
+                </div>
+                <hr />
+                <div class="Observacoes align-content-start  m-1 mb-4">
+                    <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Observacoes:</label>
+                    <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.Observacoes</textarea>
+                </div>
+
+                <a href="@Url.Action("Edit", new { id = item.InventarioCranioId })" class="btn btn-secondary">Alterar</a>
+
+                <a href="@Url.Action("Delete", new { id = item.InventarioCranioId })" class="btn btn-danger">Apagar</a>
+            </div>
+        </div>
+    }
+</div>

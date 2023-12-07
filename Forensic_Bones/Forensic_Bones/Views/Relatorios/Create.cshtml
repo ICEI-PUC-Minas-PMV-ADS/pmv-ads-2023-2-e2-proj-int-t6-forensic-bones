@@ -1,0 +1,49 @@
+﻿@model Forensic_Bones.Models.Relatorio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="tituloPage m-3 text-center">
+    <h4><b>RELATÓRIO DE ANTROPOLOGIA FORENSE</b></h4>
+</div>
+<hr />
+
+<div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
+    <div class="card-content">
+        <div class="card-header"><h5 class="card-title" id="">Adicionar Relatório</h5></div>
+
+    </div>
+    <div class="card-body flex-md-column justify-content-center ">
+        <form id="cardForm" asp-action="Create" Class="text">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <label asp-for="Codigo" class="control-label"></label>
+                <input asp-for="Codigo" class="form-control text-center" />
+                <span asp-validation-for="Codigo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <label asp-for="UsuarioId" class="control-label"></label>
+                <select asp-for="UsuarioId" class="form-control text-center" asp-items="ViewBag.UsuarioId"></select>
+            </div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control text-center" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 align-content-start  m-1">
+                <label for="Observacoes" class="col-12 mb-3 mx-auto">Observacoes:</label>
+                <textarea asp-for="Observacoes" id="Observacoes" name="Observacoes" class="form-control text-center"></textarea>
+                <span asp-validation-for="Observacoes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-secondary m-3" asp-action="Index">Relatórios</a>
+                <input type="submit" value="Novo" class="btn custom-button-card" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

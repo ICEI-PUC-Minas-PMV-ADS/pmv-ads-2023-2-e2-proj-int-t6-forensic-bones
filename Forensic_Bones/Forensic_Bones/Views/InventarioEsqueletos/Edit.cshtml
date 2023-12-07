@@ -1,0 +1,49 @@
+﻿@model Forensic_Bones.Models.InventarioEsqueleto
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="tituloPage m-3 text-center">
+    <h4><b>RELATÓRIO DE ANTROPOLOGIA FORENSE</b></h4>
+</div>
+<hr />
+<div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
+    <div class="card-content">
+        <div class="card-header"><h5 class="card-title" id="">Adicionar Inventário do Esqueleto</h5></div>
+
+    </div>
+
+    <div class="card-body flex-md-column justify-content-center ">
+        <form id="cardForm" asp-action="Edit" Class="text">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3 col-6 mx-auto d-none">
+                <label asp-for="InventarioEsqueletoId" class="control-label"></label>
+                <input asp-for="InventarioEsqueletoId" class="form-control text-center" />
+                <span asp-validation-for="InventarioEsqueletoId" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <label asp-for="RelatorioId" class="control-label"></label>
+                <select asp-for="RelatorioId" class="form-control text-center" asp-items="ViewBag.RelatorioId"></select>
+            </div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <label asp-for="FotoEsqueleto" class="control-label"></label>
+                <input asp-for="FotoEsqueleto" class="form-control text-center" />
+                <span asp-validation-for="FotoEsqueleto" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <label asp-for="ObservacoesEsq" class="control-label"></label>
+                <input asp-for="ObservacoesEsq" class="form-control text-center" />
+                <span asp-validation-for="ObservacoesEsq" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 col-6 mx-auto">
+                <a class="btn btn-secondary m-3" asp-action="Index">Voltar</a>
+                <input type="submit" value="Alterar" class="btn custom-button-card" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

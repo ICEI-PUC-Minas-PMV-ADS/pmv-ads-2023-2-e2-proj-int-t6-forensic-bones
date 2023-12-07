@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Forensic_Bones.Models.Relatorio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    var orderedModel = Model.OrderByDescending(i => i.Data);
+}
+<div class="tituloPage m-3 text-center">
+    <h4><b>RELATÓRIO DE ANTROPOLOGIA FORENSE</b></h4>
+
+</div>
+<hr />
+<div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
+    <div class="card-content">
+        <div class="card-header"><h5 class="card-title" id="">Últimos Relatórios</h5></div>
+
+    </div>
+    @for (int i = Model.Count() - 1; i >= 0; i--)
+    {
+        var item = Model.ElementAt(i);
+
+        <div class="card text-center d-flex mx-auto m-3 col-10">
+            <div class="card-body flex-md-column justify-content-center ">
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Relatorio" class="col-sm-4 mb-3 mx-auto">Relatório:</label>
+                    <input for="Relatorio" class="form-control text-center" readonly value="@item.Codigo" />
+                </div>
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Data" class="col-sm-4 mb-3 mx-auto">Data:</label>
+                    <input for="Data" class="form-control text-center" readonly value="@item.Data" />
+                </div>
+                <div class="form-group mb-3 col-8 mx-auto">
+                    <label for="Usuario" class="col-sm-4 mb-3 mx-auto">Usuário:</label>
+                    <input for="Usuario" class="form-control text-center" readonly value="@item.Usuario.Email" />
+                </div>
+
+            </div>
+            <div class="Observacoes align-content-start  m-1">
+                <label for="Observacoes" class="col-sm-4 mb-3 mx-auto">Observacoes:</label>
+                <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@item.Observacoes</textarea>
+            </div>
+            <div class="buttonCrud m-3 d-flex mx-auto align-content-center">
+                <a asp-action="Edit" asp-route-id="@item.RelatorioId" class="btn custom-button-card me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">Alterar</a>
+                <a asp-action="Details" asp-route-id="@item.RelatorioId" class="btn btn-secondary me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Detalhar">Detalhar</a>
+                <a asp-action="Delete" asp-route-id="@item.RelatorioId" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Deletar">Apagar</a>
+
+            </div>
+
+        </div>
+
+    }
+    <div class="btn-card mb-3">
+        <a asp-action="Create" class="btn custom-button-card">Novo relatório</a>
+    </div>
+</div>
