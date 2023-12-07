@@ -11,7 +11,6 @@
 
 * Breno Augusto França da Silva
 * Bruno de Lima e Souza
-* Gabriel Muzzi Machado
 * João Paulo de Freitas Teixeira Leite
 * Luilson de Jesus Brandão
 * Vanderson Barbosa de Oliveira
