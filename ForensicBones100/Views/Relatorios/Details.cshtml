@@ -1,0 +1,295 @@
+﻿@model ForensicBones100.Models.Relatorio
+
+<div class="tituloPage m-3 text-center">
+    <h4><b>RELATÓRIO DE ANTROPOLOGIA FORENSE</b></h4>
+</div>
+<hr />
+
+<div class="card text-center d-flex mx-auto col-lg-7 col-md-9 col-sm-8 m-5">
+    <div class="card-header">
+        <h4>Detalhes do Relatório</h4>
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#inventarioEsqueleto">Inventário Esqueleto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#inventarioCranio">Inventário Crânio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#marcadoresCranio">Estimativa de Sexo</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body tab-content">
+        <!-- Aba Inventário Esqueleto -->
+        <div class="tab-pane fade show active" id="inventarioEsqueleto">
+            @foreach (var inventarioEsqueleto in Model.InventariosEsqueleto)
+            {
+                <h5>Inventário do Esqueleto</h5>
+                <hr />
+
+                <dl class="row flex-md-column align-content-center mx-auto ">
+
+                    <dt class="col-sm-10 text-center">
+                        <div class="card-text col-12">
+                            @Html.DisplayNameFor(model => inventarioEsqueleto.FotoEsqueleto)
+                            <img src="@inventarioEsqueleto.FotoEsqueleto" alt="Imagem" class="img-thumbnail d-flex mx-auto" style="max-width: 100%;" />
+                        </div>
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => inventarioEsqueleto.FotoEsqueleto)
+                    </dd>
+
+                    <dt class="col-sm-10">
+                        @Html.DisplayNameFor(model => inventarioEsqueleto.ObservacoesEsq)
+                    </dt>
+                    <dd class="col-sm-10 text-center">
+                        @Html.DisplayFor(model => inventarioEsqueleto.ObservacoesEsq)
+                    </dd>
+                </dl>
+            }
+        </div>
+
+        <!-- Aba Inventário Crânio -->
+        <div class="tab-pane fade" id="inventarioCranio">
+            @foreach (var inventarioCranio in Model.InventarioCranio)
+            {
+                <h5>Inventário do Crânio</h5>
+                <hr />
+
+                    <dl class="row flex-md-column align-content-center mx-auto ">
+
+                        <dt class="col-sm-10 text-center">
+                            <p class="card-text col-12">
+                                Fotos do Crânio
+                                <img src="@inventarioCranio.FotosCranio" alt="Imagem" class="img-thumbnail d-flex mx-auto" style="max-width: 100%;" />
+                            </p>
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => inventarioCranio.FotosCranio)
+                        </dd>
+
+                        <dt class="col-sm-10">
+                            @Html.DisplayNameFor(model => inventarioCranio.Observacoes)
+                        </dt>
+                        <dd class="col-sm-10 text-center">
+                            @Html.DisplayFor(model => inventarioCranio.Observacoes)
+                        </dd>
+                        <dt class="col-sm-10 text-center pt-3 pb-3">Número de Ossos Presentes</dt>
+                    </dl>
+
+                //orgainize the bones in a grid
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                    
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Frontal: <b>@Html.DisplayFor(model => inventarioCranio.Frontal)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Frontal:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.FrontalDesc)</textarea>
+                    
+                </div>
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Ocipital:  <b>@Html.DisplayFor(model => inventarioCranio.Ocipital)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Ocipital:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.OcipitalDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Esfenoide: <b>@Html.DisplayFor(model => inventarioCranio.Esfenoide)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Esfenoide:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.EsfenoideDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Maxilar: <b>@Html.DisplayFor(model => inventarioCranio.Maxilar)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Maxilar:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.MaxilarDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Vomer: <b>@Html.DisplayFor(model => inventarioCranio.Vomer)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Vomer:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.VomerDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Parietal Esquerdo: <b>@Html.DisplayFor(model => inventarioCranio.ParietalEsquerdo)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Parietal Esquerdo:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.ParietalEsquerdoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Temporal Esquerdo: <b>@Html.DisplayFor(model => inventarioCranio.TemporalEsquerdo)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Temporal Esquerdo:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.TemporalEsquerdoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Concha Nasal Esquerda: <b>@Html.DisplayFor(model => inventarioCranio.ConchaNasalInferiorEsquerda)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Concha Nasal Esquerda:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.ConchaNasalInferiorEsquerdaDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Etmoide Esquerdo: <b>@Html.DisplayFor(model => inventarioCranio.Etmoide)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Etmoide Esquerdo:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.EtmoideDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Lacrimal Esquerdo: <b>@Html.DisplayFor(model => inventarioCranio.LacrimalEsquerdo)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Lacrimal Esquerdo:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.LacrimalEsquerdoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Nasal Esquerdo: <b>@Html.DisplayFor(model => inventarioCranio.NasalEsquerdo)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Etmoide Esquerdo:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.NasalEsquerdoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Zigomatico Esquerdo: <b>@Html.DisplayFor(model => inventarioCranio.ZigomaticoEsquerdo)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Zigomatico Esquerdo:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.ZigomaticoEsquerdoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Parietal Direito: <b>@Html.DisplayFor(model => inventarioCranio.ParietalDireito)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Parietal Direito:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.ParietalDireitoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Temporal Direito: <b>@Html.DisplayFor(model => inventarioCranio.TemporalDireito)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Temporal Direito:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.TemporalDireitoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Concha Nasal Direita: <b>@Html.DisplayFor(model => inventarioCranio.ConchaNasalInferiorDireita)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Concha Nasal Direita:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.ConchaNasalInferiorDireitaDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Etmoide Direito: <b>@Html.DisplayFor(model => inventarioCranio.LacrimalDireito)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Etmoide Direito:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.LacrimalDireitoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Lacrimal Direito: <b>@Html.DisplayFor(model => inventarioCranio.NasalDireito)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Lacrimal Direito:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.NasalDireitoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Zigomatico Direito: <b>@Html.DisplayFor(model => inventarioCranio.ZigomaticoDireito)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Zigomatico Direito:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.ZigomaticoDireitoDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Hioide: <b>@Html.DisplayFor(model => inventarioCranio.Hioide)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Hioide:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.HioideDesc)</textarea>
+                  </div>
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Cartilagem Tireoide: <b>@Html.DisplayFor(model => inventarioCranio.CartilagemTireoide)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Cartilagem Tireoide:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.CartilagemTireoideDesc)</textarea>
+                    </div>
+
+                <div class="form-group row-5 col-lg-10 col-md-10 col-sm-10 mb-3 mx-auto">
+                        <label for="Relatorio" class="col-sm-12 mb-3 mx-auto">Mandíbula: <b>@Html.DisplayFor(model => inventarioCranio.Mandibula)</b></label>
+                        <label for="Observacoes" class="col-sm-12 mb-3 mx-auto">Descrição Mandíbula:</label>
+                        <textarea for="Observacoes" name="Observacoes" class="form-control text-center" readonly>@Html.DisplayFor(model => inventarioCranio.MandibulaDesc)</textarea>
+                    </div>
+
+            }
+        </div>
+
+        <!-- Aba Marcadores Crânio -->
+        <div class="tab-pane fade" id="marcadoresCranio">
+            @foreach (var marcadoresCranio in Model.MarcadoresCranio)
+            {
+                <h5>Estimativa Antroposcópica de Sexo</h5>
+                <hr />
+         
+        <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="TheadTitle text-center">
+                            <tr>
+                                <th>Características</th>
+                                <th>Sexo</th>
+                                <th>Observações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center align-middle">Cristal Nucal</td>
+                        <td class="text-center align-middle"><b>@Html.DisplayFor(model => marcadoresCranio.CristaNucal)</b></td>
+                        <td>
+                                        <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@Html.DisplayFor(model => marcadoresCranio.CristaNucalDesc)</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle">Processo Mastóide</td>
+                                    <td class="text-center align-middle"><b>@Html.DisplayFor(model => marcadoresCranio.ProcessoMastoide)</b></td>
+                        <td>
+                                        <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@Html.DisplayFor(model => marcadoresCranio.ProcessoMastoideDesc)</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle">Eminência Mentoniana</td>
+                                    <td class="text-center align-middle"><b>@Html.DisplayFor(model => marcadoresCranio.EminenciaMentoniana)</b></td>
+                        <td>
+                                        <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@Html.DisplayFor(model => marcadoresCranio.EminenciaMentonianaDesc)</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle">Margem Supra-Orbital</td>
+                        <td class="text-center align-middle"><b>@Html.DisplayFor(model => marcadoresCranio.SupraOrbital)</b></td>
+                        <td>
+                                        <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@Html.DisplayFor(model => marcadoresCranio.SupraOrbitalDesc)</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle">Área da Glabela</td>
+                        <td class="text-center align-middle"><b>@Html.DisplayFor(model => marcadoresCranio.AreaGlabela)</td>
+                        <td>
+                                        <textarea class="form-control text-center" readonly placeholder="Deixe um comentário aqui" id="floatingTextarea2" style="height: 40px">@Html.DisplayFor(model => marcadoresCranio.AreaGlabelaDesc)</textarea>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+                        <div class="form-group align-content-center mx-auto text-center col-lg-6 col-md-8 col-sm-12 mb-3">
+                            <div class="custom-bg-color d-flex  p-3">
+                                <div class="mr-3 pe-1" style="flex: 1;">
+                                    <label for="CalculoEstimativaSexo" class="control-label">Sexo Estimado:</label>
+                                    @Html.DisplayFor(model => marcadoresCranio.CalculoEstimativaSexo)
+                                </div>
+
+                            </div>
+                        </div>
+        </div>
+    </div>
+
+            }
+            </div>
+        </div>
+    
+
+<!-- CSS do Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- Scripts do Bootstrap (jQuery é necessário) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+

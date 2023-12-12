@@ -1,0 +1,329 @@
+﻿@model ForensicBones100.Models.MarcadoresCranio
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="MarcadoresCranioId" />
+    <div class="card text-center d-flex mx-auto m-5 col-lg-8 col-md-12 col-sm-12">
+        <div class="card-header">
+            <h3>Estimativa de Sexo</h3>
+            <h5>Análise Antroposcópica do Crânio</h5>
+        </div>
+        <div class="form-group col-2 m-3">
+            <label class="control-label">Relatório</label>
+            <select asp-for="RelatorioMarcadoresId" class="form-control text-center" asp-items="ViewBag.RelatorioMarcadoresId"></select>
+        </div>
+
+        <div class="row">
+            <!--Crista Nucal-->
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="card text-center d-flex" style="height: 220px;">
+                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <!-- Característica -->
+                            <fieldset class="Caracteristica text-center">
+                                <legend style="font-size: small">Característica</legend>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#CristalNucal">Crista Nucal</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="CristalNucal" tabindex="-1" aria-labelledby="CristalNucal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="CristalNucal">Crista Nucal</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="~/lib/Images/CristaNucal.png" alt="" width="300" height="100" class="d-inline-block align-text-top">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- Sexo -->
+                            <fieldset class="Sexo text-center me-3">
+                                <legend style="font-size: small">Sexo</legend>
+                                <select asp-for="CristaNucal" id="CristaNucalCalc" class="form-select text-center" aria-label="Default select example">
+                                    <option selected>Estimar</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="I">Inconclusivo</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <!-- Observações -->
+                        <fieldset class="CristaNucalDesc text-center" style="width: 100%;">
+                            <legend style="font-size: small">Observações</legend>
+                            <div class="form-group text-center">
+                                <textarea class="form-control text-center" asp-for="CristaNucalDesc" placeholder="Deixe um comentário" style="font-size: small" id="floatingTextarea2"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <!--ProcessoMastoide-->
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="card text-center d-flex" style="height: 220px;">
+                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <!-- Característica -->
+                            <fieldset class="Caracteristica text-center">
+                                <legend style="font-size: small">Característica</legend>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ProcessoMastoide">Processo Mastóide</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="ProcessoMastoide" tabindex="-1" aria-labelledby="ProcessoMastoide" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="ProcessoMastoide">Processo Mastóide</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="~/lib/Images/ProcessoMastoide.png" alt="" width="300" height="100" class="d-inline-block align-text-top">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- Sexo -->
+                            <fieldset class="Sexo text-center me-3">
+                                <legend style="font-size: small">Sexo</legend>
+                                <select asp-for="ProcessoMastoide" id="ProcessoMastoideCalc" class="form-select text-center" aria-label="Default select example">
+                                    <option selected>Estimar</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="I">Inconclusivo</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <!-- Observações -->
+                        <fieldset class="ProcessoMastoideDesc text-center" style="width: 100%;">
+                            <legend style="font-size: small">Observações</legend>
+                            <div class="form-group text-center">
+                                <textarea class="form-control text-center" asp-for="ProcessoMastoideDesc" placeholder="Deixe um comentário" style="font-size: small" id="floatingTextarea2"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <!--EminenciaMentoniana-->
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="card text-center d-flex" style="height: 220px;">
+                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <!-- Característica -->
+                            <fieldset class="Caracteristica text-center">
+                                <legend style="font-size: small">Característica</legend>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#EminenciaMentoniana">Eminência Mentoniana</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="EminenciaMentoniana" tabindex="-1" aria-labelledby="EminenciaMentoniana" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="EminenciaMentoniana">Eminência Mentoniana</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="~/lib/Images/EminenciaMentoniana.png" alt="" width="300" height="100" class="d-inline-block align-text-top">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- Sexo -->
+                            <fieldset class="Sexo text-center me-3">
+                                <legend style="font-size: small">Sexo</legend>
+                                <select asp-for="EminenciaMentoniana" id="EminenciaMentonianaCalc" class="form-select text-center" aria-label="Default select example">
+                                    <option selected>Estimar</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="I">Inconclusivo</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <!-- Observações -->
+                        <fieldset class="EminenciaMentonianaDesc text-center" style="width: 100%;">
+                            <legend style="font-size: small">Observações</legend>
+                            <div class="form-group text-center">
+                                <textarea class="form-control text-center" asp-for="EminenciaMentonianaDesc" placeholder="Deixe um comentário" style="font-size: small" id="floatingTextarea2"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <!--AreaGlabela-->
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="card text-center d-flex" style="height: 220px;">
+                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <!-- Característica -->
+                            <fieldset class="Caracteristica text-center">
+                                <legend style="font-size: small">Característica</legend>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#AreaGlabela">Área da Glabela</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="AreaGlabela" tabindex="-1" aria-labelledby="AreaGlabela" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="AreaGlabela">Área da Glabela</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="~/lib/Images/AreaGlabela.png" alt="" width="300" height="100" class="d-inline-block align-text-top">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- Sexo -->
+                            <fieldset class="Sexo text-center me-3">
+                                <legend style="font-size: small">Sexo</legend>
+                                <select asp-for="AreaGlabela" id="AreaGlabelaCalc" class="form-select text-center" aria-label="Default select example">
+                                    <option selected>Estimar</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="I">Inconclusivo</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <!-- Observações -->
+                        <fieldset class="AreaGlabelaDesc text-center" style="width: 100%;">
+                            <legend style="font-size: small">Observações</legend>
+                            <div class="form-group text-center">
+                                <textarea class="form-control text-center" asp-for="AreaGlabelaDesc" placeholder="Deixe um comentário" style="font-size: small" id="floatingTextarea2"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <!--SupraOrbital-->
+            <div class="col-12 col-lg-6 mx-auto mb-3">
+                <div class="card text-center d-flex" style="height: 220px;">
+                    <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <!-- Característica -->
+                            <fieldset class="Caracteristica text-center">
+                                <legend style="font-size: small">Característica</legend>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#SupraOrbital">Margem Supra-Orbital</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="SupraOrbital" tabindex="-1" aria-labelledby="SupraOrbital" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="SupraOrbital">Margem Supra-Orbital</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="~/lib/Images/SupraOrbital.png" alt="" width="300" height="100" class="d-inline-block align-text-top">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- Sexo -->
+                            <fieldset class="Sexo text-center me-3">
+                                <legend style="font-size: small">Sexo</legend>
+                                <select asp-for="SupraOrbital" id="SupraOrbitalCalc" class="form-select text-center" aria-label="Default select example">
+                                    <option selected>Estimar</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="I">Inconclusivo</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <!-- Observações -->
+                        <fieldset class="SupraOrbitalDesc text-center" style="width: 100%;">
+                            <legend style="font-size: small">Observações</legend>
+                            <div class="form-group text-center">
+                                <textarea class="form-control text-center" asp-for="SupraOrbitalDesc" placeholder="Deixe um comentário" style="font-size: small" id="floatingTextarea2"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="resultadoModal" tabindex="-1">
+            <div class="modal-dialog text-center">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title">Resultado da Estimativa de Sexo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mx-auto col-lg-2 col-sm-4 col-md-4">
+            <label asp-for="CalculoEstimativaSexo" class="control-label"><b>Sexo Estimado</b></label>
+            <input asp-for="CalculoEstimativaSexo" class="form-control text-center" readonly />
+            <span asp-validation-for="CalculoEstimativaSexo" class="text-danger"></span>
+            <button type="button" class="EstimarSexobtn btn custom-button-card mt-3 " value="" id="" data-bs-toggle="tooltip" data-bs-placement="top" title="" onclick="estimarSexo()">Estimar Sexo</button>
+        </div>
+        <div class="buttonCrud mt-5 mb-5 d-flex mx-auto align-content-center">
+
+            <input type="hidden" />
+            <a asp-action="Index" class="btn btn-secondary me-1" id="cancelDelete" data-bs-toggle="tooltip" data-bs-placement="top" title="Cancelar">Estimativas</a>
+            <button type="submit" class="btn custom-button-card" value="Edit" id="createItem" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">Alterar</button>
+
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script>
+        function estimarSexo() {
+            // Obtenha os valores selecionados
+            var cristaNucal = document.getElementById('CristaNucalCalc').value;
+            var processoMastoide = document.getElementById('ProcessoMastoideCalc').value;
+            var eminenciaMentoniana = document.getElementById('EminenciaMentonianaCalc').value;
+            var areaGlabela = document.getElementById('AreaGlabelaCalc').value;
+            var supraOrbital = document.getElementById('SupraOrbitalCalc').value;
+
+            // Crie um array com as respostas
+            var respostas = [cristaNucal, processoMastoide, eminenciaMentoniana, areaGlabela, supraOrbital];
+
+            // Conte a ocorrência de cada resposta
+            var contagemMasculino = respostas.filter(r => r === 'M').length;
+            var contagemFeminino = respostas.filter(r => r === 'F').length;
+            var contagemInconclusivo = respostas.filter(r => r === 'I').length;
+
+            // Determine a resposta mais frequente
+            var resultado = determinarResultado(contagemMasculino, contagemFeminino, contagemInconclusivo);
+
+            // Atualize o campo CalculoEstimativaSexo
+            document.getElementById('CalculoEstimativaSexo').value = resultado;
+
+            // Exiba o modal com o resultado
+            exibirModalResultado(resultado);
+        }
+
+        function determinarResultado(contagemM, contagemF, contagemI) {
+            // Implemente a lógica para determinar o resultado aqui
+            // (use a lógica que você preferir)
+            // Exemplo simples: retorne o valor mais frequent
+            if (contagemM > contagemF && contagemM >= contagemI) {
+                return 'M';
+            } else if (contagemF > contagemM && contagemF >= contagemI) {
+                return 'F';
+            } else {
+                return 'I';
+            }
+        }
+
+        function exibirModalResultado(resultado) {
+            // Lógica para exibir o modal com o resultado aqui
+            // Por exemplo, você pode preencher o <p> dentro do modal com o resultado
+            var modalBody = document.querySelector('#resultadoModal .modal-body p');
+            modalBody.textContent = 'Resultado: ' + resultado;
+
+            // Abra o modal
+            $('#resultadoModal').modal('show');
+        }
+
+        // Exemplo de vinculação ao evento de clique no botão "Estimar Sexo"
+        document.querySelector('.EstimarSexobtn').addEventListener('click', estimarSexo);
+    </script>
+}

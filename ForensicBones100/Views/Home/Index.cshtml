@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner bg-black">
+        <div class="carousel-item active">
+            <img src="/lib/Images/ImgLab1.jpg" class="img-fluid custom-carousel-image d-block w-75 mx-auto" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Ágil e prático</h5>
+                <p>Conduza suas análises de antropologia forense de maneira digital.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/lib/Images/ImgLab2.jpg" class="img-fluid custom-carousel-image d-block w-75 mx-auto" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Histórico</h5>
+                <p>Acesse o registro completo de todas as suas análises.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/lib/Images/ImgLab3.jpg" class="img-fluid custom-carousel-image d-block w-75 mx-auto" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Responsivo</h5>
+                <p>Design responsivo garante uma experiência consistente em dispositivos diversos.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="card text-center m-5 col-lg-6 col-md-10 col-sm-12 mx-auto">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title pb-4">Antropologia Forense</h5>
+        <p class="card-text text-md-start" style="text-align: justify;">O antropólogo forense desempenha um papel crucial na recuperação e análise de vestígios em casos periciais. Além de estimar características biológicas essenciais, como idade, sexo, estatura e origem biogeográfica de restos humanos, eles têm a capacidade de ir além. Em uma ampla variedade de situações, os antropólogos forenses, devido à sua formação, não se limitam à coleta de vestígios; eles também têm a capacidade de reconstruir os eventos ocorridos no local do crime, determinar o intervalo pós-morte, e até mesmo identificar indivíduos, fornecendo informações valiosas para a resolução de casos (MACHADO et al., 2022). <br /><br /> De acordo com GÓRKA e PLENS (2020), nos estudos antropológicos forenses, a análise do crânio é uma ferramenta crucial para determinar características biológicas de indivíduos desconhecidos, incluindo o sexo. A precisão na estimativa do sexo a partir do crânio é de grande importância em cenários forenses. Através de métodos científicos e análise rigorosa, é possível determinar o sexo de indivíduos a partir das características do crânio.</p>
+        <a href="https://portalabol.com.br/rbol/index.php/RBOL/article/view/133/132" target="_blank" class="btn custom-button-card">Saiba Mais</a>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+</div>
+
+<div class="row justify-content-center align-items-center d-flex flex-md-wrap m-4">
+    @if (!User.Identity.IsAuthenticated || User.IsInRole("Admin"))
+    {
+        <div class="col-md-auto mb-3">
+            <div class="card">
+                <div class="card-body text-center align-items-center d-flex flex-column">
+                    <h5 class="card-title">Criar uma Nova Conta</h5>
+                    <p class="card-text">Registre-se para Acessar os Recursos.</p>
+                    <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Create">Quero me cadastrar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto mb-3">
+            <div class="card">
+                <div class="card-body text-center align-items-center d-flex flex-column">
+                    <h5 class="card-title">Faça o Login</h5>
+                    <p class="card-text">Registre-se para Acessar os Recursos.</p>
+                    <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Logout">Já sou cadastrado</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

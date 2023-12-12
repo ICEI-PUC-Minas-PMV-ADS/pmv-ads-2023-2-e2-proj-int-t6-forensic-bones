@@ -1,0 +1,54 @@
+﻿@model ForensicBones100.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="tituloPage m-3 text-center">
+    <h4><b>REALIZAR CADASTRO</b></h4>
+</div>
+<hr />
+
+<div class="card text-center d-flex mx-auto col-lg-5 col-md-9 col-sm-8 m-5">
+    <div class="card-content">
+        <div class="card-header"><h5 class="card-title" id="">Dados do Usuário</h5></div>
+
+    </div>
+    <div class="card-body d-flex justify-content-center">
+        <form id="cardForm" asp-action="Create" Class="text">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control text-center" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control text-center" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control text-center" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Cargo" class="control-label"></label>
+                <input asp-for="Cargo" class="form-control text-center" />
+                <span asp-validation-for="Cargo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3 text-center">
+                <label asp-for="Perfil" class="control-label text-center"></label>
+                <select asp-for="Perfil" class="form-control text-center" asp-items="Html.GetEnumSelectList<Perfil>()"></select>
+                <span asp-validation-for="Perfil" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+
+                <input type="submit" value="Adicionar" class="btn custom-button-card" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

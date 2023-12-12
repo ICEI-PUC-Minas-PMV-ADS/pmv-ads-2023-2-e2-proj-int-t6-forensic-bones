@@ -5,13 +5,12 @@
 
 `SEGUNDO SEMESTRE`
 
-<li><a href="https://drive.google.com/file/d/1YCLgHBhCRKph4dP90IQDoBHCY6FzhXvn/view?usp=sharing"> Vídeo do projeto</a></li>
+<li><a href="https://youtu.be/_TWx9UTVUtM"> Vídeo do projeto</a></li>
 
 ## Integrantes
 
 * Breno Augusto França da Silva
 * Bruno de Lima e Souza
-* Gabriel Muzzi Machado
 * João Paulo de Freitas Teixeira Leite
 * Luilson de Jesus Brandão
 * Vanderson Barbosa de Oliveira

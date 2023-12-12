@@ -1,0 +1,360 @@
+﻿@model ForensicBones100.Models.InventarioCranio
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="tituloPage m-3 text-center">
+    <h4><b>RELATÓRIO DE ANTROPOLOGIA FORENSE - INVENTÁRIO DO CRÂNIO</b></h4>
+
+</div>
+<hr />
+<div class="row-cols-12 ">
+    <div class="row-cols-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="InventarioCranioId" />
+            <div class="form-group col-lg-2 col-md-2 col-sm-4 ms-3 me-3">
+                <label asp-for="RelatorioCranioId" class="control-label"></label>
+                <select asp-for="RelatorioCranioId" class="form-control text-center" asp-items="ViewBag.RelatorioCranioId"></select>
+            </div>
+            <div class="form-group col-lg-4 col-md-8 col-sm-6 ms-3 me-3">
+                <label asp-for="FotosCranio" class="control-label">Fotos do Crânio</label>
+                <input asp-for="FotosCranio" class="form-control text-center" />
+                <span asp-validation-for="FotosCranio" class="text-danger text-center"></span>
+            </div>
+            <div class="form-group col-lg-5 col-md-8 col-sm-6 ms-3 me-3">
+                <label asp-for="Observacoes" class="control-label"></label>
+                <textarea asp-for="Observacoes" class="form-control text-center"></textarea>
+                <span asp-validation-for="Observacoes" class="text-danger"></span>
+            </div>
+
+            <div class="row col-lg-12 col-sm-12 col-md-12 mt-5 mx-auto">
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Frontal" class="control-label"></label>
+                            <input asp-for="Frontal" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Frontal" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="FrontalDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="FrontalDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="FrontalDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Ocipital" class="control-label"></label>
+                            <input asp-for="Ocipital" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Ocipital" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="OcipitalDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="OcipitalDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="OcipitalDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Esfenoide" class="control-label"></label>
+                            <input asp-for="Esfenoide" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Esfenoide" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="EsfenoideDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="EsfenoideDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="EsfenoideDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Maxilar" class="control-label"></label>
+                            <input asp-for="Maxilar" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Maxilar" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="MaxilarDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="MaxilarDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="MaxilarDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Vomer" class="control-label"></label>
+                            <input asp-for="Vomer" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Vomer" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="VomerDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="VomerDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="VomerDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="ParietalEsquerdo" class="control-label col-12"></label>
+                            <input asp-for="ParietalEsquerdo" class="form-control col-3 text-center" />
+                            <span asp-validation-for="ParietalEsquerdo" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ParietalEsquerdoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="ParietalEsquerdoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="ParietalEsquerdoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="TemporalEsquerdo" class="control-label"></label>
+                            <input asp-for="TemporalEsquerdo" class="form-control col-3 text-center" />
+                            <span asp-validation-for="TemporalEsquerdo" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="TemporalEsquerdoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="TemporalEsquerdoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="TemporalEsquerdoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="ConchaNasalInferiorEsquerda" class="control-label "></label>
+                            <input asp-for="ConchaNasalInferiorEsquerda" class="form-control text-center" />
+                            <span asp-validation-for="ConchaNasalInferiorEsquerda" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ConchaNasalInferiorEsquerdaDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="ConchaNasalInferiorEsquerdaDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="ConchaNasalInferiorEsquerdaDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Etmoide" class="control-label"></label>
+                            <input asp-for="Etmoide" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Etmoide" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="EtmoideDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="EtmoideDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="EtmoideDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="LacrimalEsquerdo" class="control-label"></label>
+                            <input asp-for="LacrimalEsquerdo" class="form-control col-3 text-center" />
+                            <span asp-validation-for="LacrimalEsquerdo" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="LacrimalEsquerdoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="LacrimalEsquerdoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="LacrimalEsquerdoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="NasalEsquerdo" class="control-label"></label>
+                            <input asp-for="NasalEsquerdo" class="form-control col-3 text-center" />
+                            <span asp-validation-for="NasalEsquerdo" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="NasalEsquerdoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="NasalEsquerdoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="NasalEsquerdoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="ZigomaticoEsquerdo" class="control-label"></label>
+                            <input asp-for="ZigomaticoEsquerdo" class="form-control col-3 text-center" />
+                            <span asp-validation-for="ZigomaticoEsquerdo" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ZigomaticoEsquerdoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="ZigomaticoEsquerdoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="ZigomaticoEsquerdoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="ParietalDireito" class="control-label"></label>
+                            <input asp-for="ParietalDireito" class="form-control col-3 text-center" />
+                            <span asp-validation-for="ParietalDireito" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ParietalDireitoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="ParietalDireitoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="ParietalDireitoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="TemporalDireito" class="control-label"></label>
+                            <input asp-for="TemporalDireito" class="form-control col-3 text-center" />
+                            <span asp-validation-for="TemporalDireito" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="TemporalDireitoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="TemporalDireitoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="TemporalDireitoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="ConchaNasalInferiorDireita" class="control-label"></label>
+                            <input asp-for="ConchaNasalInferiorDireita" class="form-control col-3 text-center" />
+                            <span asp-validation-for="ConchaNasalInferiorDireita" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ConchaNasalInferiorDireitaDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="ConchaNasalInferiorDireitaDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="ConchaNasalInferiorDireitaDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="LacrimalDireito" class="control-label"></label>
+                            <input asp-for="LacrimalDireito" class="form-control col-3 text-center" />
+                            <span asp-validation-for="LacrimalDireito" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="LacrimalDireitoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="LacrimalDireitoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="LacrimalDireitoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="NasalDireito" class="control-label"></label>
+                            <input asp-for="NasalDireito" class="form-control col-3 text-center" />
+                            <span asp-validation-for="NasalDireito" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="NasalDireitoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="NasalDireitoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="NasalDireitoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="ZigomaticoDireito" class="control-label"></label>
+                            <input asp-for="ZigomaticoDireito" class="form-control col-3 text-center" />
+                            <span asp-validation-for="ZigomaticoDireito" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ZigomaticoDireitoDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="ZigomaticoDireitoDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="ZigomaticoDireitoDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Hioide" class="control-label"></label>
+                            <input asp-for="Hioide" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Hioide" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="HioideDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="HioideDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="HioideDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 ">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="CartilagemTireoide" class="control-label"></label>
+                            <input asp-for="CartilagemTireoide" class="form-control col-3 text-center" />
+                            <span asp-validation-for="CartilagemTireoide" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="CartilagemTireoideDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="CartilagemTireoideDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="CartilagemTireoideDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-12 col-sm-12 mb-3 mx-auto">
+                    <div class="custom-bg-color d-lg-flex flex-md-column flex-sm-column mx-auto p-3">
+                        <div class="mr-3 pe-1 col-lg-3 col-sm-8 col-md-8 mx-auto">
+                            <label asp-for="Mandibula" class="control-label"></label>
+                            <input asp-for="Mandibula" class="form-control col-3 text-center" />
+                            <span asp-validation-for="Mandibula" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="MandibulaDesc" class="form-check-label">Descrição</label>
+                            <textarea asp-for="MandibulaDesc" class="form-control text-center"></textarea>
+                            <span asp-validation-for="MandibulaDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="form-group mt-3 d-flex justify-content-center mx-auto mb-4">
+                    <a class="btn btn-secondary me-2 " asp-action="Index">Inventários</a>
+                    <input type="submit" value="Alterar" class="btn custom-button-card" />
+                </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
